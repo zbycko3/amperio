@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="pl" data-scrapbook-source="https://www.skapiec.pl/" data-scrapbook-create="20200507123014106">
+<head>
+        <meta charset="UTF-8"><script type="text/javascript" async="" src="js.js"></script><script type="text/javascript" async="" src="analytics.js"></script><script async="" src="analytics.js"></script><script async="" src="gtm.js"></script><script>/* <![CDATA[ */ accConf = {"rum":{"tid":"EA-1746213","boot":"disable","cookieInfo":0,"pageType":"HTML"},"das":{"network":"1746213"},"events":{"endpointPaths":["/a8f4d8cd95e164917035b64b867a45dd"]}}; /* ]]> */</script>
+        <script type="text/javascript">
+        !function(){var r="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,e="function"==typeof Object.defineProperties?Object.defineProperty:function(t,e,n){t!=Array.prototype&&t!=Object.prototype&&(t[e]=n.value)};function n(){n=function(){},r.Symbol||(r.Symbol=t)}var i=0;function t(t){return"jscomp_symbol_"+(t||"")+i++}function o(){n();var t=r.Symbol.iterator;t||(t=r.Symbol.iterator=r.Symbol("iterator")),"function"!=typeof Array.prototype[t]&&e(Array.prototype,t,{configurable:!0,writable:!0,value:function(){return a(this)}}),o=function(){}}function a(t){var e,n=0;return e=function(){return n<t.length?{done:!1,value:t[n++]}:{done:!0}},o(),(e={next:e})[r.Symbol.iterator]=function(){return this},e}function l(t){o();var e=t[Symbol.iterator];return e?e.call(t):a(t)}function p(t){if(!(t instanceof Array)){t=l(t);for(var e,n=[];!(e=t.next()).done;)n.push(e.value);t=n}return t}var h=0;var m="img script iframe link audio video source".split(" ");function v(t,e){for(var n=(t=l(t)).next();!n.done;n=t.next())if(n=n.value,e.includes(n.nodeName.toLowerCase())||v(n.children,e))return!0;return!1}function w(t,e){if(2<t.length)return performance.now();for(var n=[],r=(e=l(e)).next();!r.done;r=e.next())r=r.value,n.push({timestamp:r.start,type:"requestStart"}),n.push({timestamp:r.end,type:"requestEnd"});for(r=(e=l(t)).next();!r.done;r=e.next())n.push({timestamp:r.value,type:"requestStart"});for(n.sort(function(t,e){return t.timestamp-e.timestamp}),t=t.length,e=n.length-1;0<=e;e--)switch(r=n[e],r.type){case"requestStart":t--;break;case"requestEnd":if(2<++t)return r.timestamp;break;default:throw Error("Internal Error: This should never happen")}return 0}function s(t){t=t||{},this.w=!!t.useMutationObserver,this.u=t.minValue||null,t=window.__tti&&window.__tti.e;var i,o,a,s,u,c,f,r,n,e,d=window.__tti&&window.__tti.o;this.a=t?t.map(function(t){return{start:t.startTime,end:t.startTime+t.duration}}):[],d&&d.disconnect(),this.b=[],this.f=new Map,this.j=null,this.v=-1/0,this.i=!1,this.h=this.c=this.s=null,i=this.m.bind(this),o=this.l.bind(this),a=XMLHttpRequest.prototype.send,s=h++,XMLHttpRequest.prototype.send=function(t){for(var e=[],n=0;n<arguments.length;++n)e[n-0]=arguments[n];var r=this;return i(s),this.addEventListener("readystatechange",function(){4===r.readyState&&o(s)}),a.apply(this,e)},u=this.m.bind(this),c=this.l.bind(this),f=fetch,fetch=function(t){for(var i=[],e=0;e<arguments.length;++e)i[e-0]=arguments[e];return new Promise(function(e,n){var r=h++;u(r),f.apply(null,[].concat(p(i))).then(function(t){c(r),e(t)},function(t){c(t),n(t)})})},(r=this).c=new PerformanceObserver(function(t){for(var e=(t=l(t.getEntries())).next();!e.done;e=t.next())if("resource"===(e=e.value).entryType&&(r.b.push({start:e.fetchStart,end:e.responseEnd}),y(r,w(r.g,r.b)+5e3)),"longtask"===e.entryType){var n=e.startTime+e.duration;r.a.push({start:e.startTime,end:n}),y(r,n+5e3)}}),r.c.observe({entryTypes:["longtask","resource"]}),this.w&&(this.h=(n=this.B.bind(this),(e=new MutationObserver(function(t){for(var e=(t=l(t)).next();!e.done;e=t.next())"childList"==(e=e.value).type&&v(e.addedNodes,m)?n(e):"attributes"==e.type&&m.includes(e.target.tagName.toLowerCase())&&n(e)})).observe(document,{attributes:!0,childList:!0,subtree:!0,attributeFilter:["href","src"]}),e))}function u(t){t.i=!0;var e=0<t.a.length?t.a[t.a.length-1].end:0,n=w(t.g,t.b);y(t,Math.max(n+5e3,e))}function y(o,t){!o.i||o.v>t||(clearTimeout(o.j),o.j=setTimeout(function(){var t=performance.timing.navigationStart,e=w(o.g,o.b);t=(window.a&&window.a.A?1e3*window.a.A().C-t:0)||performance.timing.domContentLoadedEventEnd-t;if(o.u)var n=o.u;else n=performance.timing.domContentLoadedEventEnd?(n=performance.timing).domContentLoadedEventEnd-n.navigationStart:null;var r=performance.now();null===n&&y(o,Math.max(e+5e3,r+1e3));var i=o.a;(e=r-e<5e3?null:r-(e=i.length?i[i.length-1].end:t)<5e3?null:Math.max(e,n))&&(o.s(e),clearTimeout(o.j),o.i=!1,o.c&&o.c.disconnect(),o.h&&o.h.disconnect()),y(o,performance.now()+1e3)},t-performance.now()),o.v=t)}s.prototype.getFirstConsistentlyInteractive=function(){var e=this;return new Promise(function(t){e.s=t,"complete"==document.readyState?u(e):window.addEventListener("load",function(){u(e)})})},s.prototype.m=function(t){this.f.set(t,performance.now())},s.prototype.l=function(t){this.f.delete(t)},s.prototype.B=function(){y(this,performance.now()+5e3)},r.Object.defineProperties(s.prototype,{g:{configurable:!0,enumerable:!0,get:function(){return[].concat(p(this.f.values()))}}});try{if(window.dlRumData=[],"PerformanceLongTaskTiming"in window&&new s({}).getFirstConsistentlyInteractive().then(function(t){t&&window.dlRumData.push({metricName:"TTI",eventValue:t})}),"PerformanceObserver"in window)new PerformanceObserver(function(t){for(var e=t.getEntries(),n=0,r=e.length;n<r;n++){var i=e[n],o="",a=Math.round(i.startTime+i.duration);if("first-contentful-paint"===i.name)o="FCP";else{if("first-paint"!==i.name)continue;o="FP"}window.dlRumData.push({metricName:o,eventValue:a})}}).observe({entryTypes:["paint"]})}catch(t){}}();
+        </script>
+        <script type="text/javascript">
+        if(accConf&&accConf.rum&&accConf.rum.data)for(var key in window.dlRumData||(window.dlRumData=[]),accConf.rum.data)window.dlRumData.push({metricName:key,eventValue:accConf.rum.data[key]});
+        </script>
+        
+        <meta name="theme-color" content="#036">
+
+        
+        <script>
+          !function(){if('PerformanceLongTaskTiming' in window){var g=window.__tti={e:[]};
+            g.o=new PerformanceObserver(function(l){g.e=g.e.concat(l.getEntries())});
+            g.o.observe({entryTypes:['longtask']})}}();
+        </script>
+        <link rel="stylesheet" type="text/css" href="home.page.css">
+<script type="text/javascript">
+/*<![CDATA[*/
+
+                var dv = "SKAPIEC/GLOWNA",
+                target;
+                target = "SKAPIEC/" + dv . split("/")[1] || "SKAPIEC/OTHER";
+
+                onetAds = {"lazy":1,"lazyPercentage":50,"async":1,"autoslot":1,"target":"","DV":"","no_gemius":1,"cookieInfo":0,"keyValues":"","cmd":[]};
+
+                onetAds.keyvalues = {"nid":1358274,"cms":"skapiec","pageType":"main"};
+                onetAds.keywords = [];
+                onetAds.target = target;
+                onetAds.DV = dv;
+            
+onetAds.kropka = {"AID": localStorage.getItem("onetAds.kropka.AID")};
+/*]]>*/
+</script>
+<title>Skąpiec.pl Wyszukiwarka najlepszych cen w sklepach internetowych</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+        <link rel="preload" as="script"><link rel="preload" as="script"><link rel="dns-prefetch" href="https://cmp.dreamlab.pl/"><link rel="dns-prefetch" href="https://events.ocdn.eu/"><link rel="dns-prefetch" href="https://fonts.gstatic.com/"><link rel="dns-prefetch" href="https://kropka.onet.pl/"><link rel="dns-prefetch" href="https://ocdn.eu/"><link rel="dns-prefetch" href="https://onet.hit.gemius.pl/"><link rel="dns-prefetch" href="https://ssl.google-analytics.com/"><link rel="dns-prefetch" href="https://stats.g.doubleclick.net/"><link rel="dns-prefetch" href="https://www.google-analytics.com/"><link rel="dns-prefetch" href="https://www.google.com/"><link rel="dns-prefetch" href="https://www.googletagmanager.com/"><link rel="dns-prefetch" href="https://www.googletagservices.com/"><link rel="dns-prefetch" href="https://www.gstatic.com/"><link rel="preconnect" href="https://i1.skapiec.pl/"><link rel="preconnect" href="https://i2.skapiec.pl/"><link rel="preconnect" href="https://i4.skapiec.pl/"><link rel="preconnect" href="https://ocdn.eu/">        <meta name="keywords" content="skąpiec, porównaj ceny, porównywarka, porównywarka cen, porównanie cen, cena, wyszukiwarka, komputery, fotografia, RTV, AGD, telefony, ogród i narzędzia, dom i wnętrze, motoryzacja, sport, odzież, dla dzieci">
+        <meta name="description" content="Wyszukiwarka najlepszych cen: miliony produktów, tysiące sklepów, setki opinii dziennie, jedno miejsce – Skąpiec.pl.">
+
+        
+        <link href="css.css" rel="stylesheet">
+
+        
+        
+                    <link rel="canonical" href="https://www.skapiec.pl/">
+        
+                    <meta name="robots" content="index, follow">
+        
+        <link rel="shortcut icon" href="favicon.ico">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#f88d00">
+        <meta name="referrer" content="unsafe-url">
+        <script>
+                        window.SKA = window.SKA || {};
+            window.SKA.adblock = true;
+
+            window.SKA.escapeHtml = function (text) {
+                return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+            };
+
+            var _gaq = _gaq || [];
+
+                        if (document.location.hash.search('from') > -1) {
+                var PPPartnerId = document.location.hash.substring(document.location.hash.search('from') + 4);
+                if (PPPartnerId.search(/\D/) > -1) {
+                    var PPPartnerId = PPPartnerId.substring(0, PPPartnerId.search(/\D/));
+                }
+                _gaq.push(['fix._set', 'campaignParams', 'utm_campaign=program-partnerski&utm_source=' + PPPartnerId + '&utm_medium=pp']);
+            }
+                    </script>
+        
+        <meta property="og:title" content="Skąpiec.pl Wyszukiwarka najlepszych cen w sklepach internetowych">
+<meta property="og:description" content="Wyszukiwarka najlepszych cen: miliony produktów, tysiące sklepów, setki opinii dziennie, jedno miejsce – Skąpiec.pl.">
+<meta property="og:site_name" content="Skapiec.pl">
+<meta property="og:url" content="https://www.skapiec.pl/">
+<meta property="og:locale" content="pl_PL">
+<meta property="fb:pages" content="109945222777">
+<meta property="og:type" content="website">
+
+        
+        <link rel="manifest" href="https://www.skapiec.pl/manifest.json?v1.0.1">
+        <script>
+            if ('PerformanceObserver' in window) {
+                var observer = new PerformanceObserver(function(list) {
+                    var entries = list.getEntries();
+
+                    for (var i = 0; i < entries; i++) {
+                        var entry = entries[i];
+                        var metricName = entry.name;
+                        var time = Math.round(entry.startTime + entry.duration);
+
+                        var event = {
+                            event: 'PerformanceEvent',
+                            GAEventCategory: 'Performance Metrics',
+                            GAEventAction: metricName,
+                            GAEventValue: time
+                        };
+                        setTimeout(function() {
+                          SKA.options.dataLayer.push(event);
+                        }, 500);
+                    }
+                });
+                observer.observe({entryTypes: ['paint']});
+            }
+        </script>
+            <script async="" src="YnVpbGQvezlza2x0ZTgxfWRsQXBpL2RsLmxpYntOTWFzX0E0MX0ubWluLmpz.js"></script><script type="text/javascript" src="gpt.js" charset="UTF-8" async=""></script><style type="text/css">.onet-ad{min-width:1px;margin-bottom:5px;text-align:center;margin-left:auto;margin-right:auto}#onet-ad-top{margin-bottom:10px}.ad_adInfo{color:#696969;font:9px Verdana,Arial,Helvetica,sans-serif;text-align:left}.ad_box,.ad_boxright1,.ad_halfpage,.ad_sky,.ad_spons_box,.ad_wrapper,.spons_box{display:inline-block;vertical-align:top}#onet-ad-right{margin:0 auto 5px}#onet-ad-left{margin:10px 20px 10px 0;float:left}.ad-frame{display:block;border:1px solid #cecece;overflow:hidden}.ad-frame .ad-frame-in{margin:-1px 0 0 -1px}.ad_default{text-align:center}#onet-ad-flat-belkagorna{margin-bottom:0}</style><link rel="preload" as="script"><script type="text/javascript" src="f.txt-1.js"></script><link rel="preload" as="script"><script type="text/javascript" src="f.txt.js"></script><script src="pubads_impl_2020043001.js" async=""></script><script type="text/javascript" src="cmp.complete.bundle.js" charset="UTF-8" async=""></script><style type="text/css">.cmp-app_gdpr{
+  /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */font-family:Helvetica Neue,arial,sans-serif;font-weight:400;font-size:16px;line-height:1.5}.cmp-app_gdpr html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}.cmp-app_gdpr body{margin:0}.cmp-app_gdpr article,.cmp-app_gdpr aside,.cmp-app_gdpr footer,.cmp-app_gdpr header,.cmp-app_gdpr nav,.cmp-app_gdpr section{display:block}.cmp-app_gdpr h1{font-size:2em;margin:.67em 0}.cmp-app_gdpr figcaption,.cmp-app_gdpr figure,.cmp-app_gdpr main{display:block}.cmp-app_gdpr figure{margin:1em 40px}.cmp-app_gdpr hr{box-sizing:content-box;height:0;overflow:visible}.cmp-app_gdpr pre{font-family:monospace,monospace;font-size:1em}.cmp-app_gdpr a{background-color:transparent;-webkit-text-decoration-skip:objects}.cmp-app_gdpr abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}.cmp-app_gdpr b,.cmp-app_gdpr strong{font-weight:inherit;font-weight:bolder}.cmp-app_gdpr code,.cmp-app_gdpr kbd,.cmp-app_gdpr samp{font-family:monospace,monospace;font-size:1em}.cmp-app_gdpr dfn{font-style:italic}.cmp-app_gdpr mark{background-color:#ff0;color:#000}.cmp-app_gdpr small{font-size:80%}.cmp-app_gdpr sub,.cmp-app_gdpr sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}.cmp-app_gdpr sub{bottom:-.25em}.cmp-app_gdpr sup{top:-.5em}.cmp-app_gdpr audio,.cmp-app_gdpr video{display:inline-block}.cmp-app_gdpr audio:not([controls]){display:none;height:0}.cmp-app_gdpr img{border-style:none}.cmp-app_gdpr svg:not(:root){overflow:hidden}.cmp-app_gdpr button,.cmp-app_gdpr input,.cmp-app_gdpr optgroup,.cmp-app_gdpr select,.cmp-app_gdpr textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}.cmp-app_gdpr button,.cmp-app_gdpr input{overflow:visible}.cmp-app_gdpr button,.cmp-app_gdpr select{text-transform:none}.cmp-app_gdpr [type=reset],.cmp-app_gdpr [type=submit],.cmp-app_gdpr button,.cmp-app_gdpr html [type=button]{-webkit-appearance:button}.cmp-app_gdpr [type=button]::-moz-focus-inner,.cmp-app_gdpr [type=reset]::-moz-focus-inner,.cmp-app_gdpr [type=submit]::-moz-focus-inner,.cmp-app_gdpr button::-moz-focus-inner{border-style:none;padding:0}.cmp-app_gdpr [type=button]:-moz-focusring,.cmp-app_gdpr [type=reset]:-moz-focusring,.cmp-app_gdpr [type=submit]:-moz-focusring,.cmp-app_gdpr button:-moz-focusring{outline:1px dotted ButtonText}.cmp-app_gdpr fieldset{padding:.35em .75em .625em}.cmp-app_gdpr legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}.cmp-app_gdpr progress{display:inline-block;vertical-align:baseline}.cmp-app_gdpr textarea{overflow:auto}.cmp-app_gdpr [type=checkbox],.cmp-app_gdpr [type=radio]{box-sizing:border-box;padding:0}.cmp-app_gdpr [type=number]::-webkit-inner-spin-button,.cmp-app_gdpr [type=number]::-webkit-outer-spin-button{height:auto}.cmp-app_gdpr [type=search]{-webkit-appearance:textfield;outline-offset:-2px}.cmp-app_gdpr [type=search]::-webkit-search-cancel-button,.cmp-app_gdpr [type=search]::-webkit-search-decoration{-webkit-appearance:none}.cmp-app_gdpr ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}.cmp-app_gdpr details,.cmp-app_gdpr menu{display:block}.cmp-app_gdpr summary{display:list-item}.cmp-app_gdpr canvas{display:inline-block}.cmp-app_gdpr [hidden],.cmp-app_gdpr template{display:none}.cmp-app_gdpr *{box-sizing:border-box}.cmp-app_gdpr a{text-decoration:none;color:#6549cb;cursor:pointer}.cmp-app_gdpr a:hover{color:#3b2787}.cmp-app_gdpr table{margin:0}.cmp-app_gdpr input:not([type]),.cmp-app_gdpr input[type=password],.cmp-app_gdpr input[type=text]{box-sizing:border-box;box-shadow:inset 0 3px 3px rgba(0,0,0,.05);background-color:#fff;border-radius:4px;border:1px solid #c5c5c5;color:#333;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:1em;margin:0;padding:0 9px;height:28px}</style><style type="text/css">.cmp-popup_popup{display:none;z-index:99999;justify-content:center;align-items:center}.cmp-popup_overlay,.cmp-popup_popup{position:fixed;top:0;bottom:0;left:0;right:0}.cmp-popup_overlay{background-color:rgba(0,0,0,.5)}.cmp-popup_content{width:700px;height:500px;background:#fff;display:flex;align-items:center;position:relative}@media only screen and (min-device-width:320px) and (max-device-width:480px){.cmp-popup_content{width:98%;height:98%}}</style><style type="text/css">div.cmp-intro_intro{display:block;padding:0 8%;max-height:100%}div.cmp-intro_intro .cmp-intro_title{font-size:30px;font-weight:700;text-align:center}div.cmp-intro_intro .cmp-intro_description{margin:4% 0;overflow:auto;height:270px}div.cmp-intro_intro .cmp-intro_options{display:flex;flex-shrink:0;width:100%;padding-bottom:10px}div.cmp-intro_intro .cmp-intro_rejectAll{flex:1;margin-right:10px}div.cmp-intro_intro .cmp-intro_acceptAll{flex:1}</style><style type="text/css">button.cmp-button_button,input[type=button].cmp-button_button{cursor:pointer;outline:none;padding:1em;background:#6549cb;color:#fff;border:none;border-radius:4px;font-size:1em;font-weight:700;text-transform:uppercase}button.cmp-button_button:hover,input[type=button].cmp-button_button:hover{color:#3b2787}button.cmp-button_button.cmp-button_invert,input[type=button].cmp-button_button.cmp-button_invert{background:#fff;border:2px solid #6549cb;color:#6549cb}button.cmp-button_button.cmp-button_invert:hover,input[type=button].cmp-button_button.cmp-button_invert:hover{color:#a898e2}</style><style type="text/css">.cmp-closebutton_closeButton{fill:#6549cb;width:30px;height:30px;cursor:pointer;position:absolute;top:-10px;right:-10px}.cmp-closebutton_closeButton.cmp-closebutton_hasBorder{background-color:#fff;border-radius:50%;box-shadow:0 0 0 3px #6549cb}</style><style type="text/css">.cmp-details_details{display:flex;flex-direction:column;flex:1;height:100%}.cmp-details_details .cmp-details_header{display:flex;align-items:center;justify-content:center;text-transform:uppercase;font-weight:700;border-bottom:1px solid #eaeaea;flex:0 0 60px}.cmp-details_details .cmp-details_body{flex:1;display:flex;min-height:0}.cmp-details_details .cmp-details_footer{display:flex;align-items:center;justify-content:flex-end;flex:0 1 80px;border-top:1px solid #eaeaea}.cmp-details_details .cmp-details_save{margin-right:20px;width:205px}.cmp-details_details .cmp-details_cancel{margin-right:25px}</style><style type="text/css">.cmp-purposes_purposes{display:flex;flex:1}.cmp-purposes_purposes .cmp-purposes_purposeList{font-size:12px;font-weight:700;flex:1;max-width:200px;border-right:1px solid #eaeaea;overflow-y:auto;overflow-x:hidden}.cmp-purposes_purposes .cmp-purposes_purposeItem{display:flex;align-items:center;height:50px;padding-left:10px;background-color:#eaeaea;border-bottom:1px solid #fff;cursor:pointer}.cmp-purposes_purposes .cmp-purposes_purposeItem:last-child{border-bottom:1px solid #eaeaea}.cmp-purposes_purposes .cmp-purposes_purposeItem.cmp-purposes_selectedPurpose{background-color:#fff;cursor:auto}.cmp-purposes_purposes .cmp-purposes_purposeDescription{flex:1;padding:20px;overflow:auto}@media screen and (max-width:768px){.cmp-purposes_purposes .cmp-purposes_purposeDescription{overflow:scroll;height:47vh}}.cmp-purposes_purposes .cmp-purposes_purposeDescription .cmp-purposes_purposesSection{border-bottom:1px solid #eaeaea}.cmp-purposes_purposes .cmp-purposes_purposeDescription .cmp-purposes_purposesSection:not(:first-child){margin:3% 0}.cmp-purposes_purposes .cmp-purposes_purposeDescription .cmp-purposes_purposesSection:last-child{border:none}.cmp-purposes_purposes .cmp-purposes_purposeDescription .cmp-purposes_purposesSection .cmp-purposes_header{font-size:22px;font-weight:700;flex:0 0 100%;display:inline-block;margin:3% 0}.cmp-purposes_purposes .cmp-purposes_sectionInfo>div{margin-bottom:3%}.cmp-purposes_purposes .cmp-purposes_sectionInfo .cmp-purposes_sectionHeader{display:flex;flex-wrap:wrap}.cmp-purposes_purposes .cmp-purposes_sectionInfo .cmp-purposes_sectionHeader .cmp-purposes_title{font-size:22px;font-weight:700;flex:0 0 100%}@media only screen and (min-device-width:320px) and (max-device-width:480px){.cmp-purposes_purposes .cmp-purposes_sectionInfo .cmp-purposes_sectionHeader .cmp-purposes_title{font-size:20px;padding-bottom:5px}}.cmp-purposes_purposes .cmp-purposes_purposeDetail{overflow:auto;height:auto;margin-bottom:3%}.cmp-purposes_purposes .cmp-purposes_purposeDetail .cmp-purposes_detailHeader{display:flex;flex-wrap:wrap}.cmp-purposes_purposes .cmp-purposes_purposeDetail .cmp-purposes_title{font-size:24px;font-weight:700;flex:0 0 100%}@media only screen and (min-device-width:320px) and (max-device-width:480px){.cmp-purposes_purposes .cmp-purposes_purposeDetail .cmp-purposes_title{font-size:20px;padding-bottom:5px}}.cmp-purposes_purposes .cmp-purposes_purposeDetail .cmp-purposes_active{color:#6549cb;font-weight:700;display:flex;align-items:center}@media only screen and (min-device-width:320px) and (max-device-width:480px){.cmp-purposes_purposes .cmp-purposes_purposeDetail .cmp-purposes_active{flex:1 1 auto}}.cmp-purposes_purposes .cmp-purposes_purposeDetail .cmp-purposes_body{margin:5% 0}.cmp-purposes_purposes .cmp-purposes_vendorLink{display:block;margin-top:30px;font-size:12px}</style><style type="text/css">.cmp-switch_switch{cursor:pointer;display:inline-block;height:28px;position:relative;user-select:none;width:50px}.cmp-switch_switch .cmp-switch_isDisabled{cursor:not-allowed}.cmp-switch_switch .cmp-switch_native{opacity:0}.cmp-switch_switch .cmp-switch_visualizationContainer{background-color:#eaeaea;border-radius:11px;height:22px;left:3px;position:absolute;top:3px;transition:.1s linear;width:44px}.cmp-switch_switch .cmp-switch_visualizationGlow{background-color:#6549cb;border-radius:9px;height:18px;left:5px;opacity:0;position:absolute;top:5px;transition:.1s linear;width:18px}.cmp-switch_switch .cmp-switch_visualizationHandle{background-color:#fff;border-radius:8px;height:16px;left:6px;position:absolute;top:6px;transition:.1s linear;width:16px}.cmp-switch_switch:hover .cmp-switch_visualizationGlow{opacity:.3;transform:scale(1.556)}.cmp-switch_switch:hover .cmp-switch_visualizationHandle{transform:scale(1.125)}.cmp-switch_switch.cmp-switch_isSelected .cmp-switch_visualizationContainer{background-color:#6549cb}.cmp-switch_switch.cmp-switch_isSelected .cmp-switch_visualizationGlow,.cmp-switch_switch.cmp-switch_isSelected .cmp-switch_visualizationHandle{transform:translate(22px)}.cmp-switch_switch.cmp-switch_isSelected:hover .cmp-switch_visualizationGlow{transform:translate(22px) scale(1.556)}.cmp-switch_switch.cmp-switch_isSelected:hover .cmp-switch_visualizationHandle{transform:translate(22px) scale(1.125)}</style><style type="text/css">div.cmp-vendors_vendors{display:flex;flex-direction:column;padding:2%;overflow:scroll;-webkit-overflow-scrolling:touch}div.cmp-vendors_vendors .cmp-vendors_header{display:flex;flex-shrink:0}@media only screen and (min-device-width:320px) and (max-device-width:480px){div.cmp-vendors_vendors .cmp-vendors_header{flex-direction:column;align-items:center}}div.cmp-vendors_vendors .cmp-vendors_title{flex:1;font-size:24px;font-weight:700}@media only screen and (min-device-width:320px) and (max-device-width:480px){div.cmp-vendors_vendors .cmp-vendors_title{text-align:center;padding-bottom:5px}}div.cmp-vendors_vendors .cmp-vendors_button{min-width:140px;padding:8px;white-space:nowrap}div.cmp-vendors_vendors .cmp-vendors_button:first-child{margin-right:10px}@media only screen and (min-device-width:320px) and (max-device-width:480px){div.cmp-vendors_vendors .cmp-vendors_button{flex:1}}div.cmp-vendors_vendors .cmp-vendors_options{display:flex}@media only screen and (min-device-width:320px) and (max-device-width:480px){div.cmp-vendors_vendors .cmp-vendors_options{width:100%}}div.cmp-vendors_vendors .cmp-vendors_description{margin:20px 0;flex-shrink:0}div.cmp-vendors_vendors .cmp-vendors_vendorHeader{display:flex;flex-shrink:0}div.cmp-vendors_vendors .cmp-vendors_vendorContent{display:flex}div.cmp-vendors_vendors .cmp-vendors_vendorList{border:1px solid #eaeaea}div.cmp-vendors_vendors .cmp-vendors_vendorName{min-height:30px;display:flex;align-items:center}div.cmp-vendors_vendors .cmp-vendors_vendorDescription{font-size:10px}div.cmp-vendors_vendors table{width:100%;border-collapse:collapse}div.cmp-vendors_vendors table thead tr{background-color:#f7f7f7;border:1px solid #eaeaea;text-transform:uppercase}div.cmp-vendors_vendors table tr{min-height:40px}div.cmp-vendors_vendors table tr th{font-weight:700}div.cmp-vendors_vendors table tr td,div.cmp-vendors_vendors table tr th{text-align:left;padding:5px}div.cmp-vendors_vendors table tr td:first-child,div.cmp-vendors_vendors table tr th:first-child{width:100%}div.cmp-vendors_vendors table tr td:last-child,div.cmp-vendors_vendors table tr th:last-child{padding-right:25px}div.cmp-vendors_vendors table tr.cmp-vendors_even{background-color:#f7f7f7}div.cmp-vendors_vendors .cmp-vendors_policy{margin:0 5px;display:flex;flex:0 1 16px}</style><style type="text/css">.cmp-footer_footer{position:fixed;left:0;right:0;bottom:0;z-index:99999;height:60px;display:none;align-items:center;justify-content:center;background:#fff;border-top:2px solid #6549cb}.cmp-footer_footer .cmp-footer_openConsent{margin-left:3px}.cmp-footer_footer .cmp-footer_close{right:0;top:0}</style><script type="text/javascript" src="MTMwMjY2MDQxL2J1aWxkL2FkcC9hZHAubWlu.js" charset="UTF-8" async=""></script>
+</head>
+    <body class="" style=""><script type="text/javascript" src="dl.boot.min.js" async="async"></script>
+
+        <div id="dsw" class="jbtssjc" data-resizable="1" data-prop-lazy="1"></div>
+        <div id="page" data-relation-menu-button=".navi .menu-btn" data-relation-departments-list=".departments-list">
+            <div id="header" data-relation-search-form="#search-form" data-relation-search-button=".navi .search-btn">
+                <div class="partial header">
+                    <div class="grid col-3 navi">
+                        <a href="" class="logo" rel="start" aria-label="logo"></a>
+                        <span class="menu-btn"><i class="icon-menu"></i><i class="expanded icon-close"></i><b>Kategorie</b></span>
+                        <span class="search-btn">
+                            <i class="icon-search"></i>
+                        </span>
+                    </div>
+                    <div class="grid col-6 search">
+                        <div class="sg-header-wrapper">
+    <form class="typeahead" action="https://www.skapiec.pl/site/szukaj/" method="get" id="search-form" data-relation-search-input=".search-input">
+        <input type="text" aria-label="Szukaj" autofocus="" class="search-input" name="szukaj" placeholder="czego szukasz?" required="" value="" autocomplete="off">
+
+                    <input id="search-context-input" type="hidden" value="[]" name="contextId">
+            <div class="search-limit">
+                <span class="destroy"><i class="icon-clear"></i></span>
+                <div class="dropdown-wrapper js search-context">
+                    <a class="btn gray m left js sort-trigger link" href="#">
+                        Wszystkie kategorie                        <i class="icon-arr1-down arr"></i>
+                    </a>
+                    <ul class="dropdown right js hidden" style="display: none;">
+                                                    <li data-context-id="[]" class="selected ">
+                                Wszystkie kategorie                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;agd&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                AGD                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;biuro-i-firma&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Biuro i firma                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;bizuteria-i-zegarki&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Biżuteria i zegarki                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;budowa-i-remont&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Budowa i remont                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;delikatesy&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Delikatesy                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;dla-dzieci&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Dla dzieci                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;dom-i-wnetrze&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Dom i wnętrze                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;erotyka&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Erotyka                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;filmy&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Filmy                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;foto&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Foto                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;gry&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Gry                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;komputery&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Komputery                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;ksiazki&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Księgarnia                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;militaria&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Militaria                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;moda&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Moda                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;motoryzacja&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Motoryzacja                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;muzyka&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Muzyka                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;ogrod&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Ogród                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;okazje&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Okazje                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;rtv&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                RTV                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;sport&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Sport                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;telefony&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Telefony                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;uroda&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Uroda                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;zdrowie&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Zdrowie                            </li>
+                                                    <li data-context-id="{&quot;id&quot;:&quot;zwierzeta-i-hobby&quot;,&quot;type&quot;:&quot;department&quot;}" class="department">
+                                Zwierzęta i hobby                            </li>
+                                            </ul>
+                </div>
+            </div>
+        
+        <input class="mobile-hidden" type="submit" value="Szukaj">
+        <button class="btn desktop-hidden" type="submit">
+            <span></span>
+        </button>
+    </form>
+</div>
+                    </div>
+                    <div class="grid col-3 links">
+                    </div>
+                </div>
+            </div>
+
+            <div class="partial departments-list" data-relation-menu-close=".close">
+    <div class="content-wrapper">
+        <div class="list">
+            <span class="title">Wszystkie kategorie:</span>
+            <span class="close"><i class="icon-close"></i></span>
+                        <a href="https://www.skapiec.pl/agd.html">
+            <i class="ico-department ico-dep-agd-1-darkblue"></i>
+            AGD        </a>
+                <a href="https://www.skapiec.pl/biuro-i-firma.html">
+            <i class="ico-department ico-dep-biuro-i-firma-1-darkblue"></i>
+            Biuro i firma        </a>
+                <a href="https://www.skapiec.pl/bizuteria-i-zegarki.html">
+            <i class="ico-department ico-dep-bizuteria-i-zegarki-1-darkblue"></i>
+            Biżuteria i zegarki        </a>
+                <a href="https://www.skapiec.pl/budowa-i-remont.html">
+            <i class="ico-department ico-dep-budowa-i-remont-1-darkblue"></i>
+            Budowa i remont        </a>
+                <a href="https://www.skapiec.pl/delikatesy.html">
+            <i class="ico-department ico-dep-delikatesy-1-darkblue"></i>
+            Delikatesy        </a>
+                <a href="https://www.skapiec.pl/dla-dzieci.html">
+            <i class="ico-department ico-dep-dla-dzieci-1-darkblue"></i>
+            Dla dzieci        </a>
+                <a href="https://www.skapiec.pl/dom-i-wnetrze.html">
+            <i class="ico-department ico-dep-dom-i-wnetrze-1-darkblue"></i>
+            Dom i wnętrze        </a>
+                <a href="https://www.skapiec.pl/erotyka.html">
+            <i class="ico-department ico-dep-erotyka-1-darkblue"></i>
+            Erotyka        </a>
+                <a href="https://www.skapiec.pl/filmy.html">
+            <i class="ico-department ico-dep-filmy-1-darkblue"></i>
+            Filmy        </a>
+                <a href="https://www.skapiec.pl/foto.html">
+            <i class="ico-department ico-dep-foto-1-darkblue"></i>
+            Foto        </a>
+                <a href="https://www.skapiec.pl/gry.html">
+            <i class="ico-department ico-dep-gry-1-darkblue"></i>
+            Gry        </a>
+                <a href="https://www.skapiec.pl/komputery.html">
+            <i class="ico-department ico-dep-komputery-1-darkblue"></i>
+            Komputery        </a>
+                <a href="https://www.skapiec.pl/ksiazki.html">
+            <i class="ico-department ico-dep-ksiazki-1-darkblue"></i>
+            Księgarnia        </a>
+                <a href="https://www.skapiec.pl/militaria.html">
+            <i class="ico-department ico-dep-militaria-1-darkblue"></i>
+            Militaria        </a>
+                <a href="https://www.skapiec.pl/moda.html">
+            <i class="ico-department ico-dep-moda-1-darkblue"></i>
+            Moda        </a>
+                <a href="https://www.skapiec.pl/motoryzacja.html">
+            <i class="ico-department ico-dep-motoryzacja-1-darkblue"></i>
+            Motoryzacja        </a>
+                <a href="https://www.skapiec.pl/muzyka.html">
+            <i class="ico-department ico-dep-muzyka-1-darkblue"></i>
+            Muzyka        </a>
+                <a href="https://www.skapiec.pl/ogrod.html">
+            <i class="ico-department ico-dep-ogrod-1-darkblue"></i>
+            Ogród        </a>
+                <a href="https://www.skapiec.pl/okazje.html">
+            <i class="ico-department ico-dep-okazje-1-red"></i>
+            Okazje        </a>
+                <a href="https://www.skapiec.pl/rtv.html">
+            <i class="ico-department ico-dep-rtv-1-darkblue"></i>
+            RTV        </a>
+                <a href="https://www.skapiec.pl/sport.html">
+            <i class="ico-department ico-dep-sport-1-darkblue"></i>
+            Sport        </a>
+                <a href="https://www.skapiec.pl/telefony.html">
+            <i class="ico-department ico-dep-telefony-1-darkblue"></i>
+            Telefony        </a>
+                <a href="https://www.skapiec.pl/uroda.html">
+            <i class="ico-department ico-dep-uroda-1-darkblue"></i>
+            Uroda        </a>
+                <a href="https://www.skapiec.pl/zdrowie.html">
+            <i class="ico-department ico-dep-zdrowie-1-darkblue"></i>
+            Zdrowie        </a>
+                <a href="https://www.skapiec.pl/zwierzeta-i-hobby.html">
+            <i class="ico-department ico-dep-zwierzeta-i-hobby-1-darkblue"></i>
+            Zwierzęta i hobby        </a>
+            </div>
+    </div>
+</div>
+
+            
+            
+            
+<div class="partial -banner"><a href="" aria-label="-banner"></a></div>
+
+            <div id="content" class=" ">
+                                                <div class="content-wrapper">
+    <h2> Przeglądaj top kategorie </h2>
+
+    <div class="browse_offers">
+                            <div class="box-wrapper ">
+            <a href="https://www.skapiec.pl/sub/520-akcja-antywirusowa.html" class="gtm_promo_sbanner1">
+                <div class="content">
+                                        <img src="walcz-z-wirusami.jpg" alt="Walcz z wirusami" class="loading" data-was-processed="true">
+
+                                            <div class="text-box">
+                            <p class="title">
+                                Walcz z wirusami                                <i class="icon-arr1-right"></i>
+                            </p>
+                        </div>
+                                    </div>
+            </a>
+        </div>
+                            <div class="box-wrapper ">
+            <a href="https://www.skapiec.pl/cat/348-maszynki-do-strzyzenia.html" class="gtm_promo_sbanner2">
+                <div class="content">
+                                        <img src="maszynki-do-strzyzenia.jpg" alt="Maszynki do strzyżenia" class="loading" data-was-processed="true">
+
+                                            <div class="text-box">
+                            <p class="title">
+                                Maszynki do strzyżenia                                <i class="icon-arr1-right"></i>
+                            </p>
+                        </div>
+                                    </div>
+            </a>
+        </div>
+                            <div class="box-wrapper ">
+            <a href="https://www.skapiec.pl/sub/522-trenuj-w-domu.html" class="gtm_promo_sbanner3">
+                <div class="content">
+                                        <img src="domowy-trening.jpg" alt="Domowy trening" class="loading" data-was-processed="true">
+
+                                            <div class="text-box">
+                            <p class="title">
+                                Domowy trening                                <i class="icon-arr1-right"></i>
+                            </p>
+                        </div>
+                                    </div>
+            </a>
+        </div>
+                            <div class="box-wrapper ">
+            <a href="https://www.skapiec.pl/cat/3928-skrzynki-na-listy.html" class="gtm_promo_sbanner4">
+                <div class="content">
+                                        <img src="skrzynki-pocztowe.jpg.png" alt="Skrzynki pocztowe" class="loading" data-was-processed="true">
+
+                                            <div class="text-box">
+                            <p class="title">
+                                Skrzynki pocztowe                                <i class="icon-arr1-right"></i>
+                            </p>
+                        </div>
+                                    </div>
+            </a>
+        </div>
+                            <div class="box-wrapper ">
+            <a href="https://www.skapiec.pl/sub/483-prezent-na-dzien-matki.html" class="gtm_promo_sbanner5">
+                <div class="content">
+                                        <img src="zamow-juz-dzis.jpg" alt="Zamów już dziś" class="loading" data-was-processed="true">
+
+                                            <div class="text-box">
+                            <p class="title">
+                                Zamów już dziś                                <i class="icon-arr1-right"></i>
+                            </p>
+                        </div>
+                                    </div>
+            </a>
+        </div>
+                            <div class="box-wrapper ">
+            <a href="https://www.skapiec.pl/sub/528-wypoczynek-w-przydomowym-ogrodzie.html" class="gtm_promo_sbanner6">
+                <div class="content">
+                                        <img src="wypoczynek-w-ogrodzie.jpg" alt="Wypoczynek w ogrodzie" class="loading" data-was-processed="true">
+
+                                            <div class="text-box">
+                            <p class="title">
+                                Wypoczynek w ogrodzie                                <i class="icon-arr1-right"></i>
+                            </p>
+                        </div>
+                                    </div>
+            </a>
+        </div>
+                            <div class="box-wrapper ">
+            <a href="https://www.skapiec.pl/sub/524-market-online.html" class="gtm_promo_sbanner7">
+                <div class="content">
+                                        <img src="zakupy-online.jpg.png" alt="Zakupy online" class="loading" data-was-processed="true">
+
+                                            <div class="text-box">
+                            <p class="title">
+                                Zakupy online                                <i class="icon-arr1-right"></i>
+                            </p>
+                        </div>
+                                    </div>
+            </a>
+        </div>
+                            <div class="box-wrapper ">
+            <a href="https://www.skapiec.pl/cat/2847-rolety.html" class="gtm_promo_sbanner8">
+                <div class="content">
+                                        <img src="rolety-okienne.jpg" alt="Rolety okienne" class="loading" data-was-processed="true">
+
+                                            <div class="text-box">
+                            <p class="title">
+                                Rolety okienne                                <i class="icon-arr1-right"></i>
+                            </p>
+                        </div>
+                                    </div>
+            </a>
+        </div>
+    </div>
+<h2>
+    Wszystkie kategorie <span>- alfabetycznie</span>
+</h2>
+<div class="partial departments-list always-expanded">
+                <a href="https://www.skapiec.pl/agd.html">
+            <i class="ico-department ico-dep-agd-1-darkblue"></i>
+            AGD        </a>
+                <a href="https://www.skapiec.pl/biuro-i-firma.html">
+            <i class="ico-department ico-dep-biuro-i-firma-1-darkblue"></i>
+            Biuro i firma        </a>
+                <a href="https://www.skapiec.pl/bizuteria-i-zegarki.html">
+            <i class="ico-department ico-dep-bizuteria-i-zegarki-1-darkblue"></i>
+            Biżuteria i zegarki        </a>
+                <a href="https://www.skapiec.pl/budowa-i-remont.html">
+            <i class="ico-department ico-dep-budowa-i-remont-1-darkblue"></i>
+            Budowa i remont        </a>
+                <a href="https://www.skapiec.pl/delikatesy.html">
+            <i class="ico-department ico-dep-delikatesy-1-darkblue"></i>
+            Delikatesy        </a>
+                <a href="https://www.skapiec.pl/dla-dzieci.html">
+            <i class="ico-department ico-dep-dla-dzieci-1-darkblue"></i>
+            Dla dzieci        </a>
+                <a href="https://www.skapiec.pl/dom-i-wnetrze.html">
+            <i class="ico-department ico-dep-dom-i-wnetrze-1-darkblue"></i>
+            Dom i wnętrze        </a>
+                <a href="https://www.skapiec.pl/erotyka.html">
+            <i class="ico-department ico-dep-erotyka-1-darkblue"></i>
+            Erotyka        </a>
+                <a href="https://www.skapiec.pl/filmy.html">
+            <i class="ico-department ico-dep-filmy-1-darkblue"></i>
+            Filmy        </a>
+                <a href="https://www.skapiec.pl/foto.html">
+            <i class="ico-department ico-dep-foto-1-darkblue"></i>
+            Foto        </a>
+                <a href="https://www.skapiec.pl/gry.html">
+            <i class="ico-department ico-dep-gry-1-darkblue"></i>
+            Gry        </a>
+                <a href="https://www.skapiec.pl/komputery.html">
+            <i class="ico-department ico-dep-komputery-1-darkblue"></i>
+            Komputery        </a>
+                <a href="https://www.skapiec.pl/ksiazki.html">
+            <i class="ico-department ico-dep-ksiazki-1-darkblue"></i>
+            Księgarnia        </a>
+                <a href="https://www.skapiec.pl/militaria.html">
+            <i class="ico-department ico-dep-militaria-1-darkblue"></i>
+            Militaria        </a>
+                <a href="https://www.skapiec.pl/moda.html">
+            <i class="ico-department ico-dep-moda-1-darkblue"></i>
+            Moda        </a>
+                <a href="https://www.skapiec.pl/motoryzacja.html">
+            <i class="ico-department ico-dep-motoryzacja-1-darkblue"></i>
+            Motoryzacja        </a>
+                <a href="https://www.skapiec.pl/muzyka.html">
+            <i class="ico-department ico-dep-muzyka-1-darkblue"></i>
+            Muzyka        </a>
+                <a href="https://www.skapiec.pl/ogrod.html">
+            <i class="ico-department ico-dep-ogrod-1-darkblue"></i>
+            Ogród        </a>
+                <a href="https://www.skapiec.pl/okazje.html">
+            <i class="ico-department ico-dep-okazje-1-red"></i>
+            Okazje        </a>
+                <a href="https://www.skapiec.pl/rtv.html">
+            <i class="ico-department ico-dep-rtv-1-darkblue"></i>
+            RTV        </a>
+                <a href="https://www.skapiec.pl/sport.html">
+            <i class="ico-department ico-dep-sport-1-darkblue"></i>
+            Sport        </a>
+                <a href="https://www.skapiec.pl/telefony.html">
+            <i class="ico-department ico-dep-telefony-1-darkblue"></i>
+            Telefony        </a>
+                <a href="https://www.skapiec.pl/uroda.html">
+            <i class="ico-department ico-dep-uroda-1-darkblue"></i>
+            Uroda        </a>
+                <a href="https://www.skapiec.pl/zdrowie.html">
+            <i class="ico-department ico-dep-zdrowie-1-darkblue"></i>
+            Zdrowie        </a>
+                <a href="https://www.skapiec.pl/zwierzeta-i-hobby.html">
+            <i class="ico-department ico-dep-zwierzeta-i-hobby-1-darkblue"></i>
+            Zwierzęta i hobby        </a>
+    </div>
+
+    <h2 class="before-popularshops">
+        Popularne sklepy
+        <span class="advertisement"> reklama </span>
+    </h2>
+
+    <div class="slider-module-container slim no-background">
+    <div class="slider">
+        <div class="slider-box-wrapper box">
+            <div class="slider-slim slider-content owl-loaded owl-drag" data-nav-class="owl-prev gtm_ha_dealers_left,owl-next gtm_ha_dealers_right">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1837px;"><div class="owl-item active" style="width: 131.25px; margin-right: 10px;"><div class="image-wrapper">
+                        <a target="_blank" class="gtm_ha_popularshops_gt" rel="nofollow noopener" href="https://www.skapiec.pl/ads/morele"><img src="morele-net.jpg.png" alt="Morele.net" class="loading" data-was-processed="true"></a>                    </div></div><div class="owl-item active" style="width: 131.25px; margin-right: 10px;"><div class="image-wrapper">
+                        <a target="_blank" class="gtm_ha_popularshops_gt" rel="nofollow noopener" href="https://www.skapiec.pl/ads/neo24"><img src="neo24-pl.jpg.png" alt="Neo24.pl" class="loading" data-was-processed="true"></a>                    </div></div><div class="owl-item active" style="width: 131.25px; margin-right: 10px;"><div class="image-wrapper">
+                        <a target="_blank" class="gtm_ha_popularshops_gt" rel="nofollow noopener" href="https://www.skapiec.pl/ads/smyk"><img src="smyk-com.jpg.png" alt="smyk.com" class="loading" data-was-processed="true"></a>                    </div></div><div class="owl-item active" style="width: 131.25px; margin-right: 10px;"><div class="image-wrapper">
+                        <a target="_blank" class="gtm_ha_popularshops_gt" rel="nofollow noopener" href="https://www.skapiec.pl/ads/mediamarkt"><img src="mediamarkt-pl.jpg.png" alt="MediaMarkt.pl" class="loading" data-was-processed="true"></a>                    </div></div><div class="owl-item active" style="width: 131.25px; margin-right: 10px;"><div class="image-wrapper">
+                        <a target="_blank" class="gtm_ha_popularshops_gt" rel="nofollow noopener" href="https://www.skapiec.pl/ads/mallpl"><img src="mall-pl.jpg.png" alt="Mall.pl" class="loading" data-was-processed="true"></a>                    </div></div><div class="owl-item active" style="width: 131.25px; margin-right: 10px;"><div class="image-wrapper">
+                        <a target="_blank" class="gtm_ha_popularshops_gt" rel="nofollow noopener" href="https://www.skapiec.pl/ads/avans1"><img src="avans-pl.jpg.png" alt="Avans.pl" class="loading" data-was-processed="true"></a>                    </div></div><div class="owl-item active" style="width: 131.25px; margin-right: 10px;"><div class="image-wrapper">
+                        <a target="_blank" class="gtm_ha_popularshops_gt" rel="nofollow noopener" href="https://www.skapiec.pl/ads/sklepopon1"><img src="sklepopon-com.jpg.png" alt="SklepOpon.com" class="loading" data-was-processed="true"></a>                    </div></div><div class="owl-item active" style="width: 131.25px; margin-right: 10px;"><div class="image-wrapper">
+                        <a target="_blank" class="gtm_ha_popularshops_gt" rel="nofollow noopener" href="https://www.skapiec.pl/ads/xkom"><img src="x-kom-pl.jpg.png" alt="x-kom.pl" class="loading" data-was-processed="true"></a>                    </div></div><div class="owl-item" style="width: 131.25px; margin-right: 10px;"><div class="image-wrapper">
+                        <a target="_blank" class="gtm_ha_popularshops_gt" rel="nofollow noopener" href="https://www.skapiec.pl/ads/geekbuying"><img src="geekbuying-pl.jpg.png" alt="Geekbuying.pl"></a>                    </div></div><div class="owl-item" style="width: 131.25px; margin-right: 10px;"><div class="image-wrapper">
+                        <a target="_blank" class="gtm_ha_popularshops_gt" rel="nofollow noopener" href="https://www.skapiec.pl/ads/oleole"><img src="oleole.jpg.png" alt="OleOle!"></a>                    </div></div><div class="owl-item" style="width: 131.25px; margin-right: 10px;"><div class="image-wrapper">
+                        <a target="_blank" class="gtm_ha_popularshops_gt" rel="nofollow noopener" href="https://www.skapiec.pl/ads/euro"><img src="rtv-euro-agd.jpg.png" alt="RTV EURO AGD"></a>                    </div></div><div class="owl-item" style="width: 131.25px; margin-right: 10px;"><div class="image-wrapper">
+                        <a target="_blank" class="gtm_ha_popularshops_gt" rel="nofollow noopener" href="https://www.skapiec.pl/ads/komputron"><img src="komputronik.jpg.png" alt="Komputronik"></a>                    </div></div><div class="owl-item" style="width: 131.25px; margin-right: 10px;"><div class="image-wrapper">
+                        <a target="_blank" class="gtm_ha_popularshops_gt" rel="nofollow noopener" href="https://www.skapiec.pl/ads/mediaexper"><img src="mediaexpert-pl.jpg.png" alt="Mediaexpert.pl"></a>                    </div></div></div></div><div class="owl-nav"><div class="owl-prev disabled gtm_ha_dealers_left"><i class="fa fa-angle-left icon-arr2-left"></i></div><div class="owl-next gtm_ha_dealers_right"><i class="fa fa-angle-right icon-arr2-right"></i></div></div><div class="owl-dots disabled"></div></div>
+        </div>
+    </div>
+</div>
+
+<div class="slider-module-container no-background js"><div class="slider"><h2>Top produkty</h2><div class="slider-box-wrapper box"><div class="popular-products slider-module slider-content owl-loaded owl-drag" data-nav-class="owl-prev gtm_da_popular_left, owl-next gtm_da_popular_right"><div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 6901px;"><div class="owl-item active" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/339/comp/79076003" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Zhong Yi Generator ozonu z funkcją jonizacji ZY-H103" data-src="https://i2.skapiec.pl/1/CksktkpTURBXy9mYzdkNzZjNzVjMDRlOTdjNzNiZjg5YzFkNDliMjkyMy5qcGeTlQLMtADCw5UCAMy0wsOTCaZkYjcyMmMG/zhong-yi-generator-ozonu-z-funkcja-jonizacji-zy-h103.jpg" src="zhong-yi-generator-ozonu-z-funkcja-jonizacji-zy-h103.jpg" class="loaded" data-was-processed="true"></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">Zhong Yi Generator ozonu z funkcją jonizacji ZY-H103</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 299,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item active" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/348/comp/100382779" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Philips Hairclipper series 3000 HC3510/15" data-src="https://i4.skapiec.pl/1/ussktkraW1hZ2VzLzMyYzlkNjcxYzBlOThmZDVkNzQwZjJkYmE0MDQyMDJmLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmQ4ODI3OQY/philips-hairclipper-series-3000-hc3510-15.jpg" src="philips-hairclipper-series-3000-hc3510-15.jpg" class="loaded" data-was-processed="true"></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">Philips Hairclipper series 3000 HC3510/15</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 99,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item active" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/2536/comp/869558477" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="ESMARA ESMARA Płaszcz damski" data-src="https://i4.skapiec.pl/1/cEbktkraW1hZ2VzLzQ0NWM2NjNiY2FkYTczNzlhNjAwYzk5ZmE0YjNhOTZhLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmRiMGE1NQY/esmara-esmara-plaszcz-damski.jpg" src="esmara-esmara-plaszcz-damski.jpg" class="loaded" data-was-processed="true"></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">ESMARA ESMARA Płaszcz damski</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 111,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item active" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/361/comp/8440709" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Janome E1015" data-src="https://i2.skapiec.pl/1/FOwktkpTURBXy9kNDZjNGZmNWJiNTljYjk1MDBiNmI2ZWFmMTMyYjZkMS5qcGeTlQLMtADCw5UCAMy0wsOTCaZjOGZhZDYG/janome-e1015.jpg" src="janome-e1015.jpg" class="loaded" data-was-processed="true"></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Janome E1015</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 499,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item active" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/361/comp/12859924" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Janome E1019 Juno" data-src="https://i4.skapiec.pl/1/Y_bktkraW1hZ2VzL2U4OWM0MTI2NWE2NjIwNTA5Yzk2YTc5YTBkZmVkNjZhLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjljMjQyNgY/janome-e1019-juno.jpg" src="janome-e1019-juno.jpg" class="loaded" data-was-processed="true"></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Janome E1019 Juno</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 699,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item active" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/17/comp/870315052" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Huawei MateBook D 14 (NobelK-WAQ9BR)" data-src="https://i4.skapiec.pl/1/2okktkraW1hZ2VzLzc5ZDY4MzhhZWVmMjM3ZmRjM2ZjMTZmY2I3M2M0OWU3LmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmZmMmY2YQY/huawei-matebook-d-14-nobelk-waq9br.jpg" src="huawei-matebook-d-14-nobelk-waq9br.jpg" class="loaded" data-was-processed="true"></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">Huawei MateBook D 14 (NobelK-WAQ9BR)</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 2 599,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/200/comp/868853828" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Xiaomi Redmi Note 8 Pro 64GB Dual Sim Zielony" data-src="https://i4.skapiec.pl/1/AqcktkraW1hZ2VzLzVmYjgxZTBlYjE0YWQyMWE3NGE1ZTY2ZWMzNzk1NjNmLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmJiYzFjMQY/xiaomi-redmi-note-8-pro-64gb-dual-sim-zielony.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Xiaomi Redmi Note 8 Pro 64GB Dual Sim Zielony</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 913,<sup>38</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/6/comp/9972006" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Brother DCP-J105 (DCPJ105YJ1)" data-src="https://i4.skapiec.pl/1/NEKktkraW1hZ2VzLzdhMTVjODBlZTBmMWI1ZWQxZTc1ZTc1YTUzMmI0YTVkLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmNhZjg4MgY/brother-dcp-j105-dcpj105yj1.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Brother DCP-J105 (DCPJ105YJ1)</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 655,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/12/comp/106180043" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Philips 499P9H/00" data-src="https://i4.skapiec.pl/1/QlnktkraW1hZ2VzL2Q1Y2JlMDlmMzU0ZmFhMGUyMTUwMzJhNjE0MTRmMDAxLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjRkMTIxZAY/philips-499p9h-00.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Philips 499P9H/00</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 4 292,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/4415/comp/79228157" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Eldom Perfect Mix MFC2000" data-src="https://i4.skapiec.pl/1/qeOktkraW1hZ2VzLzhlN2RiMDAwMWE4YzAyODlkZjAyZjU2MDQzMTA5ZDg4LmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjZiN2NjOQY/eldom-perfect-mix-mfc2000.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">Eldom Perfect Mix MFC2000</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 899,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/6/comp/86660984" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="HP LaserJet Pro M28a (W2G54A)" data-src="https://i4.skapiec.pl/1/dxlktkraW1hZ2VzLzUwYjdlYmMxZTg5ZDE1YWNlMGJiZTRmNmM3YzJhODZhLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjFmYTNjYwY/hp-laserjet-pro-m28a-w2g54a.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">HP LaserJet Pro M28a (W2G54A)</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 441,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/6/comp/82441369" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="HP Deskjet 2630" data-src="https://i4.skapiec.pl/1/aNaktkraW1hZ2VzLzE4Y2M5OGQxNTM2YzFlZmU2MWRlNDllMGY4ZmVkYWYyLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjE2MjJlYgY/hp-deskjet-2630.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">HP Deskjet 2630</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 259,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/348/comp/86521281" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Remington Pro Power HC7170" data-src="https://i4.skapiec.pl/1/bQQktkraW1hZ2VzLzAxM2IxOWVjZTQ2NjdhYzQ4ODRkNTkwMThjM2UwYWE2LmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmEwNmIyMQY/remington-pro-power-hc7170.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">Remington Pro Power HC7170</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 229,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/17/comp/105661163" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="HP Omen 17-an103nd 4TY19EAR HP Renew" data-src="https://i4.skapiec.pl/1/hkkktkraW1hZ2VzL2FiYjRmZGU5NmUwNzEyY2I0NGNmOWFmMDFhZTU4NTFlLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjFmOTUwNQY/hp-omen-17-an103nd-4ty19ear-hp-renew.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">HP Omen 17-an103nd 4TY19EAR HP Renew</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 4 399,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/4909/comp/872878373" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Rękawiczki Basic Nitrylowe Bezpudrowe 100szt M" data-src="https://i4.skapiec.pl/1/lxcktkraW1hZ2VzLzQzNWVjYTg1ZDViZWYzODM5NmQxZmViYjI0ZDM4MjQxLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjY5N2VmMwY/rekawiczki-basic-nitrylowe-bezpudrowe-100szt-m.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">Rękawiczki Basic Nitrylowe Bezpudrowe 100szt M</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 89,<sup>90</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/17/comp/868672471" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Dell Inspiron G3" data-src="https://i4.skapiec.pl/1/QtgktkraW1hZ2VzLzJjNzc5MjhiOWQzMTE1MmNiOGY2ZTRmNmUzNjQ2ZTcxLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmQ4YjhlMwY/dell-inspiron-g3.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-100 s" style="width:100%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Dell Inspiron G3</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 3 249,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/339/comp/77936086" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Eltom Zy-H102" data-src="https://i2.skapiec.pl/1/0tVktkpTURBXy9mNjRjZWU0Y2E1NzBlOGYyNWM4ZTE3YWEwY2E4MWNmOS5qcGeTlQLMtADCw5UCAMy0wsOTCaYyYjZjZDkG/eltom-zy-h102.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">Eltom Zy-H102</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 139,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/2744/comp/869128461" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Xiaomi Amazfit GTS Czarny" data-src="https://i4.skapiec.pl/1/iuKktkraW1hZ2VzLzJiMzczNjk3MDc3M2RhOTU5MzNmNzM3ZmQ4MDk1MjA4LmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjJiZmI4NQY/xiaomi-amazfit-gts-czarny.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Xiaomi Amazfit GTS Czarny</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 490,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/49/comp/867686257" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Xiaomi Redmi AirDots czarne" data-src="https://i4.skapiec.pl/1/4gNktkraW1hZ2VzL2E5ZjA2ZDcwMmFhNmUzM2Y5YzIyNmFiNjEwYTc1MGRlLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmJkODM4YgY/xiaomi-redmi-airdots-czarne.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Xiaomi Redmi AirDots czarne</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 75,<sup>35</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/404/comp/77297866" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Karcher WV 5 Premium 1.633-447.0" data-src="https://i4.skapiec.pl/1/uncktkraW1hZ2VzL2ExYmVkMDQ0ODgwYjYzNjNjMGYwODcxNjM4MWEwNWUyLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmQ2ZjFjNwY/karcher-wv-5-premium-1-633-447-0.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">Karcher WV 5 Premium 1.633-447.0</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 317,<sup>77</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/3319/comp/106861700" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Samsung QE55Q60RA" data-src="https://i4.skapiec.pl/1/8f0ktkraW1hZ2VzL2NjNDdjNDVlOTMxY2Q4NDJkYTc3YTYzZjA2Yzk4ZTI3LmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjJiNzc4YQY/samsung-qe55q60ra.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Samsung QE55Q60RA</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 2 570,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/3319/comp/866357506" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Samsung UE55RU7172" data-src="https://i4.skapiec.pl/1/SebktkraW1hZ2VzL2RlNzVhMDRiMjg5OTczNjgyMTY2NWQ1OTk0N2I0OWZhLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmI3MGQzOQY/samsung-ue55ru7172.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Samsung UE55RU7172</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 1 620,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/419/comp/81234896" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="KAYOBA Lezak" data-src="https://i4.skapiec.pl/1/cJQktkraW1hZ2VzL2QxMGE4NmRmZjJmYjg5NDdiMmM4ZGE3MmU1MmFiNmZmLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmUwODRlMgY/kayoba-lezak.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">KAYOBA Lezak</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 69,<sup>99</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/200/comp/108213246" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Samsung Galaxy A40 64GB Dual Sim Czarny" data-src="https://i4.skapiec.pl/1/G1mktkraW1hZ2VzLzg3NWI5MDdhYTQ1NmMzZmViY2ZlZDhjMjI0OWRhY2NmLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjU5NWEwOQY/samsung-galaxy-a40-64gb-dual-sim-czarny.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Samsung Galaxy A40 64GB Dual Sim Czarny</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 860,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/308/comp/107791873" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Samsung RB37J501MB1" data-src="https://i4.skapiec.pl/1/NynktkraW1hZ2VzLzVhNmJjNWIyOWRjMWRiYTViNjg0ZDhiMmM4ODU5ZjcxLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmQ4NjEzZgY/samsung-rb37j501mb1.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">Samsung RB37J501MB1</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 2 099,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/6/comp/14687500" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Canon Pixma MG5750 (0557C006AA)" data-src="https://i4.skapiec.pl/1/opBktkraW1hZ2VzLzI0MmYxMDY0YmQzZWJiNzZiMjViMmQwZDJhMzE2YWYxLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmYwYjAwZgY/canon-pixma-mg5750-0557c006aa.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Canon Pixma MG5750 (0557C006AA)</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 499,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/6/comp/84183642" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Brother DCP-L2532DW (DCPL2532DWYJ1)" data-src="https://i4.skapiec.pl/1/GHcktkraW1hZ2VzL2Q5ZmFkOGFkOTMxM2ZkMjMyNTBhMTJiY2FiZjc4ZGUyLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmJlNzZjNQY/brother-dcp-l2532dw-dcpl2532dwyj1.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-100 s" style="width:100%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Brother DCP-L2532DW (DCPL2532DWYJ1)</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 649,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/4527/comp/13927451" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="KARCHER ścierki z mikrofibry WV 2 2.633-100" data-src="https://i4.skapiec.pl/1/iOwktkraW1hZ2VzL2IzNGU4MzdjZDBmOWFkNmNjZjcyZmVlNjE5YzMwOThjLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjBjMDVhZAY/karcher-scierki-z-mikrofibry-wv-2-2-633-100.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-100 s" style="width:100%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">KARCHER ścierki z mikrofibry WV 2 2.633-100</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 239,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/308/comp/17888282" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Samsung RB37J5925SS" data-src="https://i2.skapiec.pl/1/EadktkpTURBXy81ODRlYzYwYjE5YjNiMmU4NWQ1OGRhZjc3Y2VkNzNlYi5qcGeTlQLMtADCw5UCAMy0wsOTCaZkNDgwNTQG/samsung-rb37j5925ss.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Samsung RB37J5925SS</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 2 199,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/217/comp/867622735" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Xiaomi Mi Band 4 Czarny" data-src="https://i4.skapiec.pl/1/ScaktkraW1hZ2VzLzFiMzU2NTAzZTlkNjRhY2E3MWMyNzEyYWMyNjM5NmY3LmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjM3Mjc1ZgY/xiaomi-mi-band-4-czarny.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Xiaomi Mi Band 4 Czarny</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 114,<sup>99</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/4415/comp/13137549" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Russell Hobbs Cook&amp;Home 21850" data-src="https://i4.skapiec.pl/1/hs9ktkraW1hZ2VzL2RhY2Y2NTEwNzM1ZDU2MTY4ZDc2ZmE0ZTE0ODgxZjI3LmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmEzMTg2NwY/russell-hobbs-cook-home-21850.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">Russell Hobbs Cook&amp;Home 21850</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 378,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/404/comp/106834435" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Bosch GlassVac 06008B7000" data-src="https://i4.skapiec.pl/1/-tjktkraW1hZ2VzLzE1YTVkZDRkYmMzYmUzNWY3MTE2MTM0NGZmN2QwNmNjLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjRlNjZmNgY/bosch-glassvac-06008b7000.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">Bosch GlassVac 06008B7000</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 253,<sup>69</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/404/comp/16594368" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Karcher K 5 Full Control Home 1.324-503.0" data-src="https://i4.skapiec.pl/1/mcjktkraW1hZ2VzLzRkZjEzODhiNWYyOTE4OWIyYzEwNDI5ZThlZTExNGY0LmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmIzMGQ3OAY/karcher-k-5-full-control-home-1-324-503-0.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-80 s" style="width:80%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">Karcher K 5 Full Control Home 1.324-503.0</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 1 199,<sup>20</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/4466/comp/102831632" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Tefal Access Steam Care DT9100" data-src="https://i4.skapiec.pl/1/BNCktkraW1hZ2VzL2NmMTY2M2I4NzE5ZjE1YmNmNWNlNDU4MWQ2NzViOTM0LmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmUzY2ZkNAY/tefal-access-steam-care-dt9100.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">Tefal Access Steam Care DT9100</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 379,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/404/comp/15352726" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="VILEDA Windomatic Power 153230" data-src="https://i4.skapiec.pl/1/CnRktkraW1hZ2VzLzFkZjRiOGYyZDMxNjc1MzU5MjQxMzI2MmUzM2RiNTFkLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmUzYmMyNAY/vileda-windomatic-power-153230.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"><span class="stars width-100 s" style="width:100%">&nbsp;</span></span></span><div class="title-container"><h2 class="title">VILEDA Windomatic Power 153230</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 140,<sup>99</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a href="https://www.skapiec.pl/site/cat/45/comp/868904362" class="item-container gtm_pa_similars"><div class="img-container"><div class="dis-percent-wrapper"><img alt="Asus RT-AC1200" data-src="https://i4.skapiec.pl/1/zn7ktkraW1hZ2VzL2FjMGQ4MGYxOTEzYmM1ZDY3MzBlNTlmY2JlZmVhOGI5LmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjUyYTVkMgY/asus-rt-ac1200.jpg" src=""></div></div><span class="stars-container"><span class="opinion-stars"></span></span><div class="title-container"><h2 class="title">Asus RT-AC1200</h2></div><div class="price-container"><strong class="price"><b><span>od</span> 179,<sup>00</sup><span> zł</span></b></strong></div></a></div></div></div><div class="owl-nav"><div class="owl-prev disabled gtm_da_popular_left"><i class="fa fa-angle-left icon-arr2-left"></i></div><div class="owl-next gtm_da_popular_right"><i class="fa fa-angle-right icon-arr2-right"></i></div></div><div class="owl-dots disabled"></div></div><div class="owl-nav"></div><div class="box-bottom"><p class="text"><b>Najczęściej oglądane</b> produkty w naszej ofercie</p><a href="https://www.skapiec.pl/top-produkty.html" class="btn blue-transparent">Zobacz wszystkie</a></div></div></div></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function (event) {
+            $('.slider-module').owlCarousel(window.SKA.options.owlCarousel.carousel);        });
+    </script>
+
+<div class="promoted-producers hidden">
+    <h2>Polecani producenci</h2>
+    <div class="producers box">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            </div>
+</div>
+<div class="slider-module-container no-background js">
+    <div class="slider">
+        <h2>
+            Premiery        </h2>
+        <div class="slider-box-wrapper box">
+            <div class="premiere-products slider-module slider-content owl-loaded owl-drag" data-nav-class="owl-prev gtm_da_newest_left,owl-next gtm_da_newest_right">
+                                                                                                                                                                                                                                                                                                                                                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1726px;"><div class="owl-item active" style="width: 161.667px; margin-right: 30px;"><a class="item-container gtm_pa_similars" title=" Resident Evil 3 (GRA PS4)" href="https://www.skapiec.pl/site/cat/2014/comp/870099710"><div class="img-container ">
+    <div class="dis-percent-wrapper">
+        <img data-src="//i4.skapiec.pl/1/Na5ktkraW1hZ2VzL2JkM2M5MzBlOWU3ZTE3MDdlMThkOWEzZDkyNjdlMzJhLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjE0N2JiYQY/resident-evil-3-gra-ps4.jpg" alt=" Resident Evil 3 (GRA PS4)" class="loaded" src="resident-evil-3-gra-ps4.jpg" data-was-processed="true">    </div>
+</div>
+
+    <span class="stars-container"><span class="opinion-stars"></span></span>
+    <div class="title-container"><h2 class="title"> Resident Evil 3 (GRA PS4)</h2></div>
+    <div class="price-container"> <strong class="price"><b><span>od </span>198,<sup>99</sup><span> zł</span></b></strong></div></a></div><div class="owl-item active" style="width: 161.667px; margin-right: 30px;"><a class="item-container gtm_pa_similars" title="Xiaomi Mi Robot Vacuum Mop Pro Czarny" href="https://www.skapiec.pl/site/cat/26146/comp/871280283"><div class="img-container ">
+    <div class="dis-percent-wrapper">
+        <img data-src="//i4.skapiec.pl/1/H0TktkraW1hZ2VzLzcyMGRhMTE5ZjNhNzcyOTI2NDA0ZjgwN2E4NDc0OGU3LmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmFmYjNjZgY/xiaomi-mi-robot-vacuum-mop-pro-czarny.jpg" alt="Xiaomi Mi Robot Vacuum Mop Pro Czarny" class="loaded" src="xiaomi-mi-robot-vacuum-mop-pro-czarny.jpg" data-was-processed="true">    </div>
+</div>
+
+    <span class="stars-container"><span class="opinion-stars"></span></span>
+    <div class="title-container"><h2 class="title">Xiaomi Mi Robot Vacuum Mop Pro Czarny</h2></div>
+    <div class="price-container"> <strong class="price"><b><span>od </span>1 499,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item active" style="width: 161.667px; margin-right: 30px;"><a class="item-container gtm_pa_similars" title=" Predator: Hunting Grounds (GRA PS4)" href="https://www.skapiec.pl/site/cat/2014/comp/871269323"><div class="img-container ">
+    <div class="dis-percent-wrapper">
+        <img data-src="//i4.skapiec.pl/1/wb7ktkraW1hZ2VzLzM0MTRiNjA3NWNjNmJhNzI0YWNmOTllNmViYmZkMjk2LmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjcxYjljNgY/predator-hunting-grounds-gra-ps4.jpg" alt=" Predator: Hunting Grounds (GRA PS4)" class="loaded" src="predator-hunting-grounds-gra-ps4.jpg" data-was-processed="true">    </div>
+</div>
+
+    <span class="stars-container"><span class="opinion-stars"></span></span>
+    <div class="title-container"><h2 class="title"> Predator: Hunting Grounds (GRA PS4)</h2></div>
+    <div class="price-container"> <strong class="price"><b><span>od </span>149,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item active" style="width: 161.667px; margin-right: 30px;"><a class="item-container gtm_pa_similars" title=" Resident Evil 3 + Resident Evil Resistance (STEAM)" href="https://www.skapiec.pl/site/cat/2011/comp/870268845"><div class="img-container ">
+    <div class="dis-percent-wrapper">
+        <img data-src="//i4.skapiec.pl/1/Fj8ktkraW1hZ2VzL2EyZmYwOTM4NDFjMmZmNjlhZDI5ODcxNTM4NjE0MzlmLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmIwNTNhNQY/resident-evil-3-resident-evil-resistance-steam.jpg" alt=" Resident Evil 3 + Resident Evil Resistance (STEAM)" class="loaded" src="resident-evil-3-resident-evil-resistance-steam.jpg" data-was-processed="true">    </div>
+</div>
+
+    <span class="stars-container"><span class="opinion-stars"></span></span>
+    <div class="title-container"><h2 class="title"> Resident Evil 3 + Resident Evil Resistance (STEAM)</h2></div>
+    <div class="price-container"> <strong class="price"><b><span>od </span>165,<sup>92</sup><span> zł</span></b></strong></div></a></div><div class="owl-item active" style="width: 161.667px; margin-right: 30px;"><a class="item-container gtm_pa_similars" title="  Final Fantasy VII Remake (GRA PS4)" href="https://www.skapiec.pl/site/cat/2014/comp/14657098"><div class="img-container ">
+    <div class="dis-percent-wrapper">
+        <img data-src="//i4.skapiec.pl/1/oj2ktkraW1hZ2VzL2NmYjQ4YzQ0NjIxNWM4MDQ4OGIzZWE5MDEyM2FlMjNkLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjYyZTVlMQY/final-fantasy-vii-remake-gra-ps4.jpg" alt="  Final Fantasy VII Remake (GRA PS4)" class="loaded" src="final-fantasy-vii-remake-gra-ps4.jpg" data-was-processed="true">    </div>
+</div>
+
+    <span class="stars-container"><span class="opinion-stars"></span></span>
+    <div class="title-container"><h2 class="title">  Final Fantasy VII Remake (GRA PS4)</h2></div>
+    <div class="price-container"> <strong class="price"><b><span>od </span>244,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item active" style="width: 161.667px; margin-right: 30px;"><a class="item-container gtm_pa_similars" title="Xiaomi Mi Robot Vacuum Mop Pro Biały" href="https://www.skapiec.pl/site/cat/26146/comp/871280282"><div class="img-container ">
+    <div class="dis-percent-wrapper">
+        <img data-src="//i4.skapiec.pl/1/9liktkraW1hZ2VzLzRlNDgxMTAxOWE5ZjFjZDI3NWIwMTE4MTgyZmQwNGY3LmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjI2NDM5NQY/xiaomi-mi-robot-vacuum-mop-pro-bialy.jpg" alt="Xiaomi Mi Robot Vacuum Mop Pro Biały" class="loaded" src="xiaomi-mi-robot-vacuum-mop-pro-bialy.jpg" data-was-processed="true">    </div>
+</div>
+
+    <span class="stars-container"><span class="opinion-stars"></span></span>
+    <div class="title-container"><h2 class="title">Xiaomi Mi Robot Vacuum Mop Pro Biały</h2></div>
+    <div class="price-container"> <strong class="price"><b><span>od </span>1 529,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a class="item-container gtm_pa_similars" title="Xiaomi Mi 10 256GB Dual Sim Szary" href="https://www.skapiec.pl/site/cat/200/comp/871304985"><div class="img-container ">
+    <div class="dis-percent-wrapper">
+        <img data-src="//i4.skapiec.pl/1/RwiktkraW1hZ2VzLzhhMzIzZTE4ZTc3OTU5YjA3NzdhMDkwNWViOGIzZTk4LmpwZ5OVAsy0AMLDlQIAzLTCw5MJpjc5ODM2ZAY/xiaomi-mi-10-256gb-dual-sim-szary.jpg" alt="Xiaomi Mi 10 256GB Dual Sim Szary">    </div>
+</div>
+
+    <span class="stars-container"><span class="opinion-stars"></span></span>
+    <div class="title-container"><h2 class="title">Xiaomi Mi 10 256GB Dual Sim Szary</h2></div>
+    <div class="price-container"> <strong class="price"><b><span>od </span>3 590,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a class="item-container gtm_pa_similars" title=" Final Fantasy VII Remake Deluxe Edition (GRA PS4)" href="https://www.skapiec.pl/site/cat/2014/comp/868025450"><div class="img-container ">
+    <div class="dis-percent-wrapper">
+        <img data-src="//i4.skapiec.pl/1/g9GktkraW1hZ2VzL2QzNTVmOWNjNWExOTc3ZmU3ZTRiOWNhZjViZDk5YzczLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmQzNDYxOAY/final-fantasy-vii-remake-deluxe-edition-gra-ps4.jpg" alt=" Final Fantasy VII Remake Deluxe Edition (GRA PS4)">    </div>
+</div>
+
+    <span class="stars-container"><span class="opinion-stars"></span></span>
+    <div class="title-container"><h2 class="title"> Final Fantasy VII Remake Deluxe Edition (GRA PS4)</h2></div>
+    <div class="price-container"> <strong class="price"><b><span>od </span>529,<sup>00</sup><span> zł</span></b></strong></div></a></div><div class="owl-item" style="width: 161.667px; margin-right: 30px;"><a class="item-container gtm_pa_similars" title=" Resident Evil 3 (GRA XBOX ONE)" href="https://www.skapiec.pl/site/cat/2015/comp/870099722"><div class="img-container ">
+    <div class="dis-percent-wrapper">
+        <img data-src="//i4.skapiec.pl/1/xkbktkraW1hZ2VzL2RlY2VmZGVkZGYyZWUzMmY5YzJkOWUzNTZjZDEzMTVkLmpwZ5OVAsy0AMLDlQIAzLTCw5MJpmJlNTY4ZAY/resident-evil-3-gra-xbox-one.jpg" alt=" Resident Evil 3 (GRA XBOX ONE)">    </div>
+</div>
+
+    <span class="stars-container"><span class="opinion-stars"></span></span>
+    <div class="title-container"><h2 class="title"> Resident Evil 3 (GRA XBOX ONE)</h2></div>
+    <div class="price-container"> <strong class="price"><b><span>od </span>229,<sup>00</sup><span> zł</span></b></strong></div></a></div></div></div><div class="owl-nav"><div class="owl-prev disabled gtm_da_newest_left"><i class="fa fa-angle-left icon-arr2-left"></i></div><div class="owl-next gtm_da_newest_right"><i class="fa fa-angle-right icon-arr2-right"></i></div></div><div class="owl-dots disabled"></div></div>
+            <div class="box-bottom">
+                <p class="text"><b>Najnowsze</b> produkty w naszej ofercie </p>
+                <a class="btn blue-transparent" href="https://www.skapiec.pl/cat/3196-premiery.html">Zobacz wszystkie</a>            </div>
+        </div>
+    </div>
+</div>
+<div class="chips-container js">
+    <ul class="tabs">
+                                    <li class="tab active" data-relation-content=".content.categories">
+                    POPULARNE KATEGORIE                </li>
+                        <li class="tab" data-relation-content=".content.popular-producers">
+            POPULARNI PRODUCENCI
+        </li>
+        <li class="tab" data-relation-content=".content.top-dealers">
+            POPULARNE SKLEPY
+        </li>
+    </ul>
+    <div class="tab_container">
+                        <h3 class="tab_drawer_heading"> Popularne kategorie <i class="icon-arr2-down"></i></h3>
+                <p class="content categories visible">
+                    <span class="links-list">
+                                                    <a href="https://www.skapiec.pl/cat/862-survival-akcesoria.html">Survival - akcesoria</a>                                                    <a href="https://www.skapiec.pl/cat/3140-wzmacniacze-sygnalu-wifi.html">Wzmacniacze sygnału wifi</a>                                                    <a href="https://www.skapiec.pl/cat/4126-opony-letnie.html">Opony letnie</a>                                                    <a href="https://www.skapiec.pl/cat/2316-termometry-lekarskie.html">Termometry lekarskie</a>                                                    <a href="https://www.skapiec.pl/cat/3319-telewizory.html">Telewizory</a>                                                    <a href="https://www.skapiec.pl/cat/304-odkurzacze.html">Odkurzacze</a>                                                    <a href="https://www.skapiec.pl/cat/4671-maski-antysmogowe.html">Maski antysmogowe i antywirusowe</a>                                                    <a href="https://www.skapiec.pl/cat/3313-czytniki-ebookow.html">Czytniki ebooków</a>                                                    <a href="https://www.skapiec.pl/cat/6-drukarki.html">Drukarki</a>                                                    <a href="https://www.skapiec.pl/cat/361-maszyny-do-szycia.html">Maszyny do szycia</a>                                                    <a href="https://www.skapiec.pl/cat/1-procesory.html">Procesory</a>                                                    <a href="https://www.skapiec.pl/cat/499-pawilony-ogrodowe.html">Pawilony ogrodowe</a>                                                    <a href="https://www.skapiec.pl/cat/3124-dyski-ssd.html">Dyski SSD</a>                                                    <a href="https://www.skapiec.pl/cat/4780-buty-sportowe-meskie.html">Buty sportowe męskie</a>                                                    <a href="https://www.skapiec.pl/cat/30-kino-domowe.html">Kino domowe</a>                                                    <a href="https://www.skapiec.pl/cat/26145-mini-piekarniki.html">Mini piekarniki</a>                                                    <a href="https://www.skapiec.pl/cat/328-plyty-gazowe-do-zabudowy.html">Płyty gazowe do zabudowy</a>                                                    <a href="https://www.skapiec.pl/cat/308-lodowki.html">Lodówki</a>                                                    <a href="https://www.skapiec.pl/cat/200-telefony-komorkowe.html">Telefony komórkowe</a>                                                    <a href="https://www.skapiec.pl/cat/419-lezaki-ogrodowe.html">Leżaki ogrodowe</a>                                                    <a href="https://www.skapiec.pl/cat/827-teleskopy.html">Teleskopy</a>                                                    <a href="https://www.skapiec.pl/cat/17-laptopy.html">Laptopy</a>                                                    <a href="https://www.skapiec.pl/cat/2217-rolki.html">Rolki</a>                                                    <a href="https://www.skapiec.pl/cat/4909-rekawiczki-jednorazowe.html">Rękawiczki jednorazowe</a>                                                    <a href="https://www.skapiec.pl/cat/348-maszynki-do-strzyzenia.html">Maszynki do strzyżenia</a>                                                    <a href="https://www.skapiec.pl/cat/2215-rowery.html">Rowery</a>                                                    <a href="https://www.skapiec.pl/cat/307-ekspresy-do-kawy.html">Ekspresy do kawy</a>                                                    <a href="https://www.skapiec.pl/cat/3928-skrzynki-na-listy.html">Skrzynki na listy</a>                                                    <a href="https://www.skapiec.pl/cat/410-wertykulatory-i-aeratory.html">Wertykulatory i aeratory</a>                                                    <a href="https://www.skapiec.pl/cat/4781-buty-trekkingowe-meskie.html">Buty trekkingowe męskie</a>                                            </span>
+                    <span class="more">
+                        Więcej
+                         <i class="icon-arr2-down"></i>
+                    </span>
+                </p>
+            
+        <h3 class="tab_drawer_heading"> Popularni producenci <i class="icon-arr2-down"></i></h3>
+
+        
+<p class="content popular-producers"><span class="links-list"><a href="https://www.skapiec.pl/producenci/samsung/produkty">Samsung</a><a href="https://www.skapiec.pl/producenci/xiaomi/produkty">Xiaomi</a><a href="https://www.skapiec.pl/producenci/philips/produkty">Philips</a><a href="https://www.skapiec.pl/producenci/hp/produkty">HP</a><a href="https://www.skapiec.pl/producenci/bosch/produkty">Bosch</a><a href="https://www.skapiec.pl/producenci/sony/produkty">Sony</a><a href="https://www.skapiec.pl/producenci/apple/produkty">Apple</a><a href="https://www.skapiec.pl/producenci/janome/produkty">Janome</a><a href="https://www.skapiec.pl/producenci/brother/produkty">Brother</a><a href="https://www.skapiec.pl/producenci/huawei/produkty">Huawei</a></span></p>
+
+
+        <h3 class="tab_drawer_heading"> Popularne sklepy <i class="icon-arr2-down"></i></h3>
+
+        
+<p class="content top-dealers"><span class="links-list"><a href="https://www.skapiec.pl/site/sklep/8177">Mediaexpert.pl</a><a href="https://www.skapiec.pl/site/sklep/13226">Allegro</a><a href="https://www.skapiec.pl/site/sklep/842">ELECTRO.pl</a><a href="https://www.skapiec.pl/site/sklep/12657">Castorama</a><a href="https://www.skapiec.pl/site/sklep/228">RTV EURO AGD</a><a href="https://www.skapiec.pl/site/sklep/277">Avans.pl</a><a href="https://www.skapiec.pl/site/sklep/7928">MediaMarkt.pl</a><a href="https://www.skapiec.pl/site/sklep/404">x-kom.pl</a><a href="https://www.skapiec.pl/site/sklep/11972">proshop.pl</a><a href="https://www.skapiec.pl/site/sklep/121">Morele.net</a></span></p>
+
+    </div>
+</div>
+</div>
+            </div>
+            
+<div id="footer-rwd">
+    <div class="content-wrapper">
+        <ul class="footer-menu">
+                            <li>
+                    <p class="accordion-header" data-state="0">
+                        <i></i>Dla użytkownika<i class="arr grey down icon-arr1-down"></i>
+                    </p>
+                    <ul class="accordion-element" style="display: none;">
+                                                    <li>
+                                <a rel="nofollow" href="https://www.skapiec.pl/site/doc/4">Najczęściej zadawane pytania</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow" href="https://www.skapiec.pl/site/doc/3">Jak to działa?</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow" href="https://zgody.skapiec.pl/">Twoje zgody</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow" href="https://www.skapiec.pl/regulamin-uzytkownika">Regulamin</a>                            </li>
+                                                    <li>
+                                <a rel="follow noopener" target="_blank" href="https://programtv.onet.pl/">Program TV</a>                            </li>
+                                            </ul>
+                </li>
+                            <li>
+                    <p class="accordion-header" data-state="0">
+                        <i></i>Dla sklepów<i class="arr grey down icon-arr1-down"></i>
+                    </p>
+                    <ul class="accordion-element" style="display: none;">
+                                                    <li>
+                                <a rel="nofollow" href="https://www.skapiec.pl/dla-sklepow">Dołącz do Skąpiec.pl</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow" href="https://www.skapiec.pl/promowane-oferty">Promowane oferty</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow" href="https://partner.moneteasy.pl/skapiec">Panel dla sklepów</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow" href="https://ranking.opineo.pl/">Raport Sklepów 2019</a>                            </li>
+                                            </ul>
+                </li>
+                            <li>
+                    <p class="accordion-header" data-state="0">
+                        <i></i>Dla partnerów<i class="arr grey down icon-arr1-down"></i>
+                    </p>
+                    <ul class="accordion-element" style="display: none;">
+                                                    <li>
+                                <a rel="nofollow" href="https://www.skapiec.pl/site/doc/402">Program Partnerski</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow" href="https://www.skapiec.pl/site/doc/400">API Skąpiec</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow" href="https://partnerzy.skapiec.pl/">Panel Programu Partnerskiego</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow" href="https://www.skapiec.pl/site/doc/402/11">FAQ - Program Partnerski</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow" href="https://www.skapiec.pl/regulamin-programu-partnerskiego">Regulamin</a>                            </li>
+                                            </ul>
+                </li>
+                            <li>
+                    <p class="accordion-header" data-state="0">
+                        <i></i>Skąpiec.pl<i class="arr grey down icon-arr1-down"></i>
+                    </p>
+                    <ul class="accordion-element" style="display: none;">
+                                                    <li>
+                                <a rel="nofollow" href="https://www.skapiec.pl/o-nas">O nas</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow" href="https://www.skapiec.pl/site/doc/200">Centrum prasowe</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow" href="https://www.skapiec.pl/praca">Praca</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow" href="https://www.skapiec.pl/kontakt">Kontakt</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow" href="https://www.skapiec.pl/lp/gwiazda-jakosci-obslugi">Gwiazda Jakości Obsługi</a>                            </li>
+                                            </ul>
+                </li>
+                            <li>
+                    <p class="accordion-header" data-state="0">
+                        <i></i>Dołącz do nas<i class="arr grey down icon-arr1-down"></i>
+                    </p>
+                    <ul class="accordion-element" style="display: none;">
+                                                    <li>
+                                <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/Skapiec">Facebook</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow noopener" target="_blank" href="https://www.instagram.com/skapiecpl/">Instagram</a>                            </li>
+                                                    <li>
+                                <a rel="nofollow noopener" target="_blank" href="https://twitter.com/plskapiec">Twitter</a>                            </li>
+                                            </ul>
+                </li>
+                    </ul>
+        <div class="bar">
+            <ul>
+                <li><a rel="nofollow" href="https://www.skapiec.pl/site/doc/9">Reklama</a></li>
+                <li><a href="https://www.skapiec.pl/SiteMap">Mapa strony</a></li>
+                <li><a rel="nofollow" href="https://www.skapiec.pl/polityka-prywatnosci">Polityka prywatności</a></li>
+                <li><a rel="nofollow" href="https://www.skapiec.pl/obowiazek-informacyjny">Obowiązek informacyjny</a></li>
+                <li><a rel="nofollow" href="https://www.skapiec.pl/kontakt?t=1">Zgłoś uwagi</a></li>
+            </ul>
+            <b>
+                © Skapiec.pl <span>2004-2020</span>
+
+                <sup>
+                    0                </sup>
+            </b>
+        </div>
+    </div>
+</div>
+            <span class="scroll-up">
+                <i class="icon-arr1-up"></i>
+            </span>
+        </div>
+
+        
+                    <div class="creation-corner hidden" style="display: block;">
+                <span class="close link"><i class="icon-close"></i></span>
+                <div id="kgmvkrdmzqn" class="jbtssjc" data-resizable="1" data-prop-lazy="1" style="display: none;"></div><script type="text/javascript">
+                    onetAds.cmd.push(function(dlApi) {
+                        var onetSlot = dlApi.defineSlot("flat-widget", "onet-ad-flat-widget", {}).setCollapseEmpty(true);
+                        
+                    onetSlot.on("display", function (sl) {
+                         document.getElementById(sl.div).parentElement.classList.remove("hidden")
+                    });
+                
+                    });
+                </script>            </div>
+        
+        <!--[if IE 8]>
+        <script src="https://i1.skapiec.pl/assets/6047d3b1/js/excanvas.compiled.js"></script>        <![endif]-->
+
+        <script src="jquery-1.10.2.min.js"></script>        <script id="filterOptions">(function(global){"use strict";Object.assign=Object.assign||function(t){for(var e,r,o=Object(t),n=1;n<arguments.length;n++){for(var b in e=Object(arguments[n]))Object.prototype.hasOwnProperty.call(e,b)&&(o[b]=e[b]);if(Object.getOwnPropertySymbols){r=Object.getOwnPropertySymbols(e);for(var c=0;c<r.length;c++)Object.prototype.propertyIsEnumerable.call(e,r[c])&&(o[r[c]]=e[r[c]])}}return o};global.SKA=global.SKA||{};global.SKA.options=Object.assign(global.SKA.options||{},{"assets":{"urls":{"img":"https:\/\/i1.skapiec.pl\/assets\/6047d3b1\/img\/<%= filename %>","js":"https:\/\/i1.skapiec.pl\/assets\/6047d3b1\/js\/<%= filename %>","css":"https:\/\/i1.skapiec.pl\/assets\/6047d3b1\/css\/<%= filename %>"}},"suggester":{"url":"\/szukaj\/typeahead"},"dataLayer":[{"pageType":"G\u0142\u00f3wna","vLoginState":"Nie","vID":"Brak"}]});})(window);</script>        <script src="common.package.js"></script><div class="autocomplete-suggestions " style="display: none;"></div>
+        <script src="dynamic.page.js"></script><script src="home.page.js"></script>        <script>var dataLayer = SKA.options.dataLayer = SKA.options.dataLayer || [];</script>        <noscript>
+        <iframe src="index_3.html" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                    'event': 'gtm.js'
+                });
+                var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;
+                j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
+                })
+                    (window,document,'script','dataLayer','GTM-VHBV');
+        </script>
+        <!--[if IE 8]>
+        <script>SKA.options.isIE = true;</script>        <![endif]-->
+
+        <div id="rcnwkhbvtr" class="jbtssjc" data-resizable="1" data-prop-lazy="1"></div>        <script>
+          if (window.ttiPolyfill) {
+            ttiPolyfill.getFirstConsistentlyInteractive().then(function(tti) {
+              var event = {
+                event: 'PerformanceEvent',
+                GAEventCategory: 'Performance Metrics',
+                GAEventAction: 'time-to-interactive',
+                GAEventValue: Math.round(tti)
+              };
+              if (event.GAEventValue) {
+                SKA.options.dataLayer.push(event);
+              }
+            });
+          }
+        </script>
+        <script src="firebase.js"></script>        <script src="pwa-init.js"></script>        <script src="lazyload.min.js" async="async"></script>    <script type="text/javascript">
+/*<![CDATA[*/
+dataLayer.push({"event":"ABTesting","TestCaseId":"FooterTest","TestCaseVariant":0});
+/*]]>*/
+</script>
+
+
+<script type="text/javascript" id="" src="tr.js"></script><iframe name="__cmpLocator" style="display: none;" src="index_1.html"></iframe>
+<script type="text/javascript" id="">window.AdCarouselTracking.track(google_tag_manager["GTM-VHBV"].macro(1));</script><div class="cmp-app_gdpr"><div class="cmp-popup_popup" style="display: none;"><div class="cmp-popup_overlay"></div><div class="cmp-popup_content"><div class="cmp-intro_intro"><span class="cmp-closebutton_closeButton cmp-closebutton_hasBorder "><svg width="30" height="30" viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet"><path d="M6.837 8l-2.45-2.464 1.17-1.17 2.45 2.464 2.465-2.465 1.17 1.17L9.162 8l2.48 2.464-1.167 1.17-2.467-2.48-2.48 2.48-1.17-1.17L6.838 8z"></path></svg></span><div class="cmp-intro_title"><span class="">Szanowna Użytkowniczko, Szanowny Użytkowniku,</span></div><div class="cmp-intro_description"><span class=""><p> Zanim klikniesz „Przejdź do serwisu” lub zamkniesz to okno, prosimy o przeczytanie tej informacji. Prosimy w niej o Twoją dobrowolną zgodę na przetwarzanie Twoich danych osobowych przez naszych partnerów biznesowych oraz przekazujemy informacje o tzw. cookies i o przetwarzaniu przez nas Twoich danych osobowych. <span style="font-weight: bold">Klikając „Przejdź do serwisu” lub zamykając okno przez kliknięcie w znaczek X, zgadzasz się na poniższe.</span> Możesz też odmówić zgody lub ograniczyć jej zakres.</p>
+			
+    <p style="margin: 25px 0 10px 0; font-weight: 900">Zgoda</p>
+	
+    <p> Jeśli chcesz zgodzić się na przetwarzanie przez <a onclick="__cmp('showVendors')">Zaufanych Partnerów</a> Grupy RAS Polska Twoich danych osobowych, które udostępniasz w historii przeglądania stron i aplikacji internetowych oraz danych lokalizacyjnych generowanych przez Twoje urządzenie, w celach marketingowych (obejmujących zautomatyzowaną analizę Twojej aktywności na stronach internetowych i w aplikacjach w celu ustalenia Twoich potencjalnych zainteresowań dla dostosowania reklamy i oferty) w tym na umieszczanie znaczników internetowych (cookies itp.) na Twoich urządzeniach i odczytywanie takich znaczników, kliknij przycisk „Przejdź do serwisu” lub zamknij to okno. </p>
+	
+<p>Jeśli nie chcesz wyrazić zgody lub ograniczyć jej zakres, kliknij „Ustawienia zaawansowane”. </p>
+
+<p>Wyrażenie zgody jest dobrowolne. Możesz edytować zakres zgody, w tym wycofać ją całkowicie, klikając „Ustawienia zaawansowane” lub przechodząc na naszą stronę
+<a href="https://polityka-prywatnosci.onet.pl/index.html" target="_blank" rel="noopener">polityki prywatności</a>.</p>
+            
+           <p>Powyższa zgoda dotyczy przetwarzania Twoich danych osobowych w celach marketingowych Zaufanych Partnerów. <a onclick="__cmp('showVendors')">Zaufani Partnerzy</a> to firmy z obszaru e-commerce i reklamodawcy oraz działające w ich imieniu domy mediowe i podobne organizacje, z którymi Grupa RAS Polska współpracuje lub które polecane są przez międzynarodowe organizacje branżowe takie jak np. organizacja IAB (Interactive Advertising Bureau). Niektórzy z <a onclick="__cmp('showVendors')">Zaufanych Partnerów</a> mogą przetwarzać Twoje dane w węższym zakresie,  niektórzy z nich mogą też przetwarzać te dane w oparciu o inną podstawę niż Twoja zgoda (np. w oparciu o uzasadniony interes administratora). Kompletną listę Zaufanych Partnerów wraz z zakresem danych przetwarzanych przez nich w oparciu o Twoją zgodę lub inną podstawę prawną znajdziesz bezpośrednio pod <a onclick="__cmp('showVendors')">tym linkiem</a>.</p>
+		   
+<p>Podmioty z Grupy RAS Polska w ramach udostępnianych przez siebie usług internetowych przetwarzają Twoje dane opisane na wstępie, a także zagregowane informacje o wieku, płci i lokalizacji (wielkości miasta z którego pochodzisz itp.) pochodzące z Twoich kont w usługach świadczonych przez podmioty z Grupy RAS Polska w celach marketingowych w oparciu o prawnie uzasadniony, wspólny interes podmiotów Grupy RAS Polska. Dane te są jednocześnie danymi niezbędnymi do realizacji przez nas umowy zawartej z Tobą, która dotyczy korzystania przez Ciebie z naszych usług i serwisów internetowych, ze względu na właściwości tych usług. Treść tej umowy określa regulamin portalu Onet - <a href="https://polityka-prywatnosci.onet.pl/regulamin.html" target="_blank" rel="noopener">https://polityka-prywatnosci.onet.pl/regulamin.html</a> - lub regulaminy innych usług świadczonych przez podmioty z Grupy RAS Polska.</p>
+
+<p>Przetwarzanie takie nie wymaga dodatkowej zgody z Twojej strony, ale możesz mu się w każdej chwili sprzeciwić. O ile nie zdecydujesz inaczej, dokonując stosownych zmian ustawień w Twojej przeglądarce, podmioty z Grupy RAS Polska będą również instalować na Twoich urządzeniach pliki cookies i podobne oraz odczytywać informacje z takich plików. Bliższe informacje o cookies znajdziesz w akapicie „Cookies” pod koniec tej informacji.
+</p>
+    <p style="margin: 25px 0 10px 0; font-weight: 900">Administrator danych osobowych</p>
+    <p> Administratorem Twoich danych osobowych jest podmiot z Grupy RAS Polska, z którego serwisu lub aplikacji korzystasz. Naszą nazwę znajdziesz zawsze na samym dole strony po prawej stronie, a logo na planszy zawierającej niniejszą informację. Informację o powołaniu przez nas inspektora ochrony danych i jego danych kontaktowych znajdziesz też na samym dole strony w polityce prywatności. Administratorami Twoich danych osobowych będą także pozostałe podmioty z Grupy RAS Polska, których pełne dane możesz sprawdzić <a href="https://polityka-prywatnosci.onet.pl/grupa-rasp.html" target="_blank" rel="noopener">pod tym linkiem</a>. Jeżeli wyrazisz zgodę, o którą wyżej prosimy, administratorami Twoich danych osobowych będą także nasi <a onclick="__cmp('showVendors')">Zaufani Partnerzy</a>. Listę Zaufanych Partnerów możesz sprawdzić w każdym momencie na stronie naszej <a href="https://polityka-prywatnosci.onet.pl/index.html" target="_blank" rel="noopener">polityki prywatności</a> i tam też zmodyfikować lub cofnąć swoje zgody.</p>
+        
+		<p style="margin: 25px 0 10px 0; font-weight: 900">Podstawa i cel przetwarzania</p>
+       
+	   <p> Twoje dane przetwarzamy w następujących celach:</p>
+        <br>
+        <ul style="list-style-position: inside; list-style-type: disc;">
+		
+            <li style="margin-bottom: 20px">1. Jeśli zawieramy z Tobą umowę o realizację danej usługi (np. usługi zapewniającej Ci możliwość zapoznania się z jednym z naszych serwisów w oparciu o treść regulaminu tego serwisu), to możemy przetwarzać Twoje dane w zakresie niezbędnym do realizacji tej umowy. Gdy zakładasz konto poczty elektronicznej, to umowa o dostarczenie tego konta upoważnia nas do przetwarzania danych niezbędnych do jego zapewnienia (np. danych podanych przez Ciebie w profilu tego konta). Bez tego nie bylibyśmy w stanie zapewnić Ci usługi, a Ty nie mógłbyś z niej korzystać. Niepodanie takich danych uniemożliwi nam zawarcie i wykonanie umowy.</li>
+			
+            <li style="margin-bottom: 20px">2. Zapewnianie bezpieczeństwa usługi (np. sprawdzenie, czy do Twojego konta nie loguje się nieuprawniona osoba), dokonanie pomiarów statystycznych, ulepszanie naszych usług i dopasowanie ich do potrzeb i wygody użytkowników (np. personalizowanie treści w usługach), jak również prowadzenie marketingu <span style="font-weight: bold">bezpośredniego</span> (także na zlecenie reklamodawców) lub promocji własnych usług (np. jeśli interesujesz się historią i oglądasz materiały historyczne w portalu Onet lub na innych stronach internetowych, to możemy Ci wyświetlić reklamę dotyczącą artykułu w serwisie Onet Podróże o historycznych trasach krajoznawczych). Takie przetwarzanie danych to realizacja naszych prawnie uzasadnionych interesów.</li>
+			
+            <li>3. Za Twoją zgodą usługi marketingowe dostarczą Ci nasi <a onclick="__cmp('showVendors')">Zaufani Partnerzy</a> oraz my dla podmiotów trzecich. Aby móc pokazać interesujące Cię reklamy (np. produktu, którego możesz potrzebować) reklamodawcy i ich przedstawiciele chcieliby mieć możliwość przetwarzania Twoich danych związanych z odwiedzanymi przez Ciebie stronami internetowymi. Udzielenie takiej zgody jest dobrowolne, nie musisz jej udzielać, nie pozbawi Cię to dostępu do naszych usług. Masz również możliwość ograniczenia zakresu lub zmiany zgody w dowolnym momencie.</li>
+        </ul>
+        
+		<br>
+        <p> Twoje dane przetwarzane będą do czasu istnienia podstawy do ich przetwarzania, czyli w przypadku udzielenia zgody do momentu jej cofnięcia, ograniczenia lub innych działań z Twojej strony ograniczających tę zgodę, w przypadku niezbędności danych do wykonania umowy, przez czas jej wykonywania i ewentualnie okres przedawnienia roszczeń z niej (zwykle nie więcej niż 3 lata, a maksymalnie 6 lat), a w przypadku, gdy podstawą przetwarzania danych jest uzasadniony interes administratora, do czasu zgłoszenia przez Ciebie skutecznego sprzeciwu.</p>
+      
+	  <p style="margin: 25px 0 10px 0; font-weight: 900">Przekazywanie danych</p>
+		
+        <p> Administratorzy danych mogą powierzać Twoje dane podwykonawcom IT, księgowym, agencjom marketingowym etc. Zrobią to jedynie w niezbędnym zakresie i na podstawie umowy o powierzenie przetwarzania danych zobowiązującej taki podmiot do odpowiedniego zabezpieczenia danych i niekorzystania z nich do własnych celów.</p>
+		
+        <p style="margin: 25px 0 10px 0; font-weight: 900">Cookies</p>
+		
+        <p> Na naszych stronach i w aplikacjach używamy znaczników internetowych takich jak pliki np. cookie lub local storage do zbierania i przetwarzania danych osobowych w celu personalizowania treści i reklam oraz analizowania ruchu na stronach, aplikacjach i w Internecie. W ten sposób technologię tę wykorzystują również podmioty z Grupy RAS Polska oraz nasi <a onclick="__cmp('showVendors')">Zaufani Partnerzy</a>, którzy także chcą dopasowywać reklamy do Twoich preferencji. Cookies to dane informatyczne zapisywane w plikach i przechowywane na Twoim urządzeniu końcowym (tj. twój komputer, tablet, smartphone itp.), które przeglądarka wysyła do serwera przy każdorazowym wejściu na stronę z tego urządzenia, podczas gdy odwiedzasz strony w Internecie. Szczegółową informację na temat plików cookie i ich funkcjonowania znajdziesz <a href="https://polityka-prywatnosci.onet.pl/grupa-rasp.html" target="_blank" rel="noopener">pod tym linkiem</a>. Pod tym linkiem znajdziesz także informację o tym jak zmienić ustawienia przeglądarki, aby ograniczyć lub wyłączyć funkcjonowanie plików cookies itp. oraz jak usunąć takie pliki z Twojego urządzenia.</p>
+		
+             
+		<p style="margin: 25px 0 10px 0; font-weight: 900">Twoje uprawnienia</p>
+        <p> Przysługują Ci następujące uprawnienia wobec Twoich danych i ich przetwarzania przez nas, inne podmioty z Grupy RAS Polska i <a onclick="__cmp('showVendors')">Zaufanych Partnerów</a>:</p>
+		<br>
+          <p>1. Jeśli udzieliłeś zgody na przetwarzanie danych możesz ją w każdej chwili wycofać (cofnięcie zgody oczywiście nie uchyli zgodności z prawem przetwarzania już dokonanego na jej podstawie);</p>
+        <p>2. Masz również prawo żądania dostępu do Twoich danych osobowych, ich sprostowania, usunięcia lub ograniczenia przetwarzania, prawo do przeniesienia danych, wyrażenia sprzeciwu wobec przetwarzania danych oraz prawo do wniesienia skargi do organu nadzorczego, którym w Polsce jest Prezes Urzędu Ochrony Danych Osobowych. <a href="https://polityka-prywatnosci.onet.pl/index.html" target="_blank" rel="noopener">Pod tym adresem</a> znajdziesz dodatkowe informacje dotyczące przetwarzania danych i Twoich uprawnień.
+        </p></span></div><div class="cmp-intro_options"><button class="cmp-button_button cmp-intro_rejectAll cmp-button_invert"><span class="">Ustawienia zaawansowane</span></button><button class="cmp-button_button cmp-intro_acceptAll "><span class="">Przejdź do serwisu</span></button></div></div></div></div><div class="cmp-footer_footer" style="display: none;"><span class="cmp-closebutton_closeButton  cmp-footer_close"><svg width="30" height="30" viewBox="0 0 16 16" preserveAspectRatio="xMidYMid meet"><path d="M6.837 8l-2.45-2.464 1.17-1.17 2.45 2.464 2.465-2.465 1.17 1.17L9.162 8l2.48 2.464-1.167 1.17-2.467-2.48-2.48 2.48-1.17-1.17L6.838 8z"></path></svg></span><span><span class="">Zmień swoje ustawienia prywatności klikając</span><a class="cmp-footer_openConsent"><span class="">tutaj</span></a></span></div></div><script type="text/javascript" id="">(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");</script><script type="text/javascript" id="">(function(){var uas={};function op(t,p,r,d){for(i=0,l=t.length;i<l;i++)if(typeof t[i]!=="undefined")if(t[i]!=""&&t[i].search("undefined")==-1)r[p+(i+1)]=t[i];else if(d)r[p+(i+1)]="(not set)"}if(google_tag_manager["GTM-VHBV"].macro(10)!=0){if(document.URL.search("utm_source\x3d")==-1){uas.campaignName="program-partnerski";uas.campaignSource=google_tag_manager["GTM-VHBV"].macro(13);uas.campaignMedium="pp"}uas.campaignId=google_tag_manager["GTM-VHBV"].macro(16)||null;uas.dimension18=google_tag_manager["GTM-VHBV"].macro(17)||null;uas.dimension19=google_tag_manager["GTM-VHBV"].macro(18)||null;uas.dimension22=
+google_tag_manager["GTM-VHBV"].macro(21)||null}op(google_tag_manager["GTM-VHBV"].macro(23),"dimension",uas,true);op(google_tag_manager["GTM-VHBV"].macro(24),"metric",uas,false);op(google_tag_manager["GTM-VHBV"].macro(25),"contentGroup",uas,false);ga("create","UA-826298-1","skapiec.pl");ga("require","GTM-N7FKW9");ga("require","displayfeatures");if("Główna"=="Produkt"){ga("require","ec");ga("ec:addProduct",{"id":"undefined","name":"undefined","category":"undefined (undefined)/undefined/undefined (undefined)",
+"brand":"undefined"});ga("ec:setAction","detail")}if(["Kategoria","Filtrowanie","Subdepartament"].includes("Główna")){ga("require","ec");var array1=google_tag_manager["GTM-VHBV"].macro(26);array1=(array1||[]).slice(0,29);array1.forEach(function(element){ga("ec:addImpression",element)})}ga("set",uas);ga("send","pageview")})();</script><iframe name="lps/SKAPIEC/GLOWNA/1588854608449_2" width="0" height="0" scrolling="no" style="margin: 0px auto; display: block; border: 0px currentcolor; vertical-align: bottom;" src="index_2.html"></iframe></body>
+</html>
